@@ -226,15 +226,43 @@ letter-spacing: -0.48px;
 /* =========================== contactUs =============================== */
 .contactUs {padding-top: 6.0625rem;}
 .contactUs .desc {text-align: center; font-family: 'Pretendard'; font-size: 1.875rem; font-style: normal; font-weight: 100; line-height: normal; letter-spacing: -0.0563rem; padding-top: 1rem ;}
-.contactUs .infoBox {padding-top: 8.4375rem;}
-.contactUs .infoBox {}
+.contactUs .infoBox {display: flex; justify-content: center; gap: 9.0625rem; padding-top: 8.4375rem; padding-bottom: 5rem;}
 .contactUs .infoBox .promoText {}
 .contactUs .infoBox .promoText .title { color: #61FF83; font-size: 1.25rem; font-family: 'GmarketSansBold'; letter-spacing: -0.0625rem;}
 .contactUs .infoBox .promoText .text {font-family: 'Pretendard'; font-size: 1.5rem; font-style: normal; font-weight: 400; line-height: 2.375rem; letter-spacing: -0.045rem;}
 .contactUs .infoBox .info {}
-.contactUs .infoBox .info .title {font-size: 1.25rem; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.0625rem; color: #61FF83;}
-.contactUs .infoBox .info .row {}
-.contactUs .infoBox .info .row .item {}
+.contactUs .infoBox .info .title {font-size: 1.25rem; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.0625rem; color: #61FF83; padding-bottom: 2rem;}
+.contactUs .infoBox .info .row {display: flex; gap: 3.25rem; padding-bottom: 1.4375rem;}
+.contactUs .infoBox .info .row .item {display: flex; align-items: center; gap: 1.1875rem;}
+.contactUs .infoBox .info .item {display: flex; align-items: center; gap: 1.1875rem;}
 .contactUs .infoBox .info .row .item .icon {width: 3.3125rem; height: 3.3125rem; display: block;}
 .contactUs .infoBox .info .row .item .icon img {width: 100%;}
 .contactUs .infoBox .info .row .item .content {font-size: 1.25rem; font-style: normal; font-weight: 500; line-height: 2.1875rem; letter-spacing: -0.0375rem;}
+
+/* form 영역 */
+.form {}
+.form .userInfo {}
+.form .userInfo .row {display: flex; gap: 1.6875rem;}
+.form .userInfo .row .userName {}
+.form .userInfo .row .userName .title {padding: 11px 224px 11px 22px;}
+.form .userInfo .row .question {}
+.form .userInfo .row .question option {}
+.form .userInfo .row .userPhone {}
+.form .userInfo .row .userPhone .title {}
+.form .userInfo .row .userPhone .text {}
+
+.form .userInfo .row .submit {}
+
+/* 공통 */
+.form .userInfo .row .title { color: #B3B3B3; font-family: 'Pretendard'; font-size: 1.5rem; font-style: normal; font-weight: 400; line-height: 2.375rem; /* 158.333% */ letter-spacing: -0.045rem; }
+.form .userInfo .row .title em {color: #61FF83;}
+.form .userInfo .row .text {}
+.form .userInfo .row input {background: none; border: none; outline: none; color: #fff; font-size: 40px; padding-left: 22px; padding-bottom: 26px;}
+
+.form .userInfo .row .userName,
+.form .userInfo .row .question,
+.form .userInfo .row .userPhone {border: 1px solid #b3b3b3;}
+
+.form .userInfo .row .userName,
+.form .userInfo .row .question {display: flex; flex-flow: column;}
+
