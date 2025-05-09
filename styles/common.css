@@ -1,0 +1,27 @@
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url("../fonts/GmarketSansTTFLight.ttf") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url("../fonts/GmarketSansTTFMedium.ttf") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url("../fonts/GmarketSansTTFBold.ttf") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {font-family: 'GmarketSansMedium'; background: #222; color: #fff; font-size: 16px;}
+.keyColor {color: #61ff83;}
+.pointColor {color: #f2eb44;}
+
+.wrap {
+  width: 100%;
+  overflow-x: hidden;
+}

@@ -1,0 +1,157 @@
+/* header */
+header {max-width: 120rem; padding: 2.5rem 17.5rem 2.5rem 15rem; background: rgba(2, 2, 2, 0.5); border-bottom-left-radius: 2.5rem; border-bottom-right-radius: 2.5rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 9;}
+header .logo {width: 7.375rem;}
+header .logo img {width: 100%;}
+header .gnb {display: flex; align-items: center; gap: 6.25rem;}
+header .gnb li {}
+header .gnb li a {}
+
+/* main 영역 */
+
+/* 공통 영역 */
+.legend {display: flex; justify-content: center;  align-items: flex-start; gap: 0.875rem;}
+.legend span {display: block;}
+.legend .num{color: #61FF83; font-size: 2rem; font-weight: 700;}
+.legend .text{text-align: center; font-size: 3.4375rem; font-weight: 700; line-height: normal;}
+
+.slideWrap {display: flex;}
+.marquee { display: flex; animation: marqueeAnimation 120s linear infinite; }
+.slideText {text-align: center; font-family: "GmarketSansMedium"; font-size: 21.875rem; font-weight: 700; letter-spacing: -0.3281rem; white-space: nowrap; display: inline-block; padding: 1.625rem 0; line-height: 1;}
+
+
+/* intro */
+.intro {position: relative;}
+.intro .videoBox {border-radius: 2.5rem; overflow: hidden; padding: 0 5.3125rem; }
+.intro #location {width: 100%; margin: 0 auto; border-radius:  2.5rem; overflow: cover;}
+.intro .textContents {position: absolute; top: 50%; transform: translateY(-50%); left: 13%;}
+.intro .textContents .title {font-size: 3rem; font-weight: 700; letter-spacing: -0.0313rem; line-height: 3.4375rem; margin-bottom: 0.6875rem; position: relative;}
+.intro .textContents .title::after {content: ''; display: inline-block; background: url(../images/img_05.png) no-repeat; width: 100%; height: 100%; position: absolute; left: 13.75rem; top: 1.25rem;}
+.intro .textContents .sub {font-size: 2.25rem; font-family: 'pretendard'; font-weight: 700; line-height: 3rem; letter-spacing: -0.0938rem; margin-bottom: 0.5625rem;}
+.intro .textContents .desc {font-size: 1.125rem; font-family: 'pretendard'; font-weight: 400; line-height: 1.5625rem; letter-spacing: -0.0625rem;}
+
+/* slogan */
+.slogan {margin: 17.9375rem 0 17.375rem 0; overflow: hidden; }
+.slogan .sloganTitle {text-align: center; font-family: "GmarketSansMedium"; font-size: 1.375rem; font-weight: 700; line-height: normal; padding-top: 2rem;}
+.slogan .sloganDesc {font-family: 'pretendard'; font-size: 1.25rem;  font-weight: 300; line-height: 1.9375rem; letter-spacing: -0.0187rem; text-align: center;}
+.slogan .logoText {text-align: center; font-family: 'Pretendard'; font-size: 2.5rem; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.0375rem; padding-top: 0.875rem;}
+
+/* 슬라이드 마퀴 애니메이션 */
+@keyframes marqueeAnimation { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
+
+/* ourServices */
+/* 상단 슬라이드 카드 */
+.ourServices {background: url(../images/bg_05.png) no-repeat center / cover; padding-top: 9.8125rem; padding-bottom: 17rem;}
+.ourServices .servicesSlide {padding-left: 18.75rem; padding-top: 6.25rem;}
+.ourServices .servicesSlide .swiper-wrapper {padding-bottom: 9.0625rem;}
+.ourServices .servicesSlide .swiper-wrapper .swiper-slide {background: rgba(43, 43, 43, 0.40); box-shadow: 0.9375rem 0.9375rem 0.9375rem 0rem rgba(0, 0, 0, 0.80); backdrop-filter: blur(0.3125rem); font-family: 'Pretendard'; padding: 5.1875rem 2.375rem 0 2.3125rem; width: 30.375rem !important; height: 39.0625rem !important;}
+.ourServices .servicesSlide .swiper-slide .num {color: #61FF83; font-size: 1.5rem; font-weight: 400; padding-bottom: 1.9375rem;}
+.ourServices .servicesSlide .swiper-slide .title {font-size: 2.25rem; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.0675rem; padding-bottom: 1.0625rem;}
+.ourServices .servicesSlide .swiper-slide .sub { font-size: 1.875rem; font-style: normal; font-weight: 400; line-height: normal; letter-spacing: -0.0563rem; padding-bottom: 1.9375rem;}
+.ourServices .servicesSlide .swiper-slide .sub .keyColor {font-weight: 700;}
+.ourServices .servicesSlide .swiper-slide .desc { font-size: 1.125rem; font-style: normal; font-weight: 100; line-height: 1.5625rem; letter-spacing: -0.0625rem; }
+.ourServices .servicesSlide .swiper-slide .desc .keyColor {font-weight: 700;}
+.ourServices .servicesSlide .swiper-slide .iconBox {padding-top: 3.5rem; width: 60%;}
+.ourServices .servicesSlide .swiper-slide .iconBox img {width: 100%;}
+.ourServices .servicesSlide .swiper-slide .slideImg {width: 26.125rem; overflow: auto;}
+.ourServices .servicesSlide .swiper-slide .slideImg img {width: auto !important;}
+
+.ourServices .servicesSlide .swiper-slide .slideImg::-webkit-scrollbar {
+    width: 4.3125rem;         /* 가로 스크롤바 높이 */
+    height: 0.5rem; 
+}
+.ourServices .servicesSlide .swiper-slide .slideImg::-webkit-scrollbar-track {
+    background: #111;
+    border-radius: 1.25rem;
+}
+.ourServices .servicesSlide .swiper-slide .slideImg::-webkit-scrollbar-thumb {
+    background: #414141; /* 스크롤바 색상 */
+    border-radius: 1.25rem;
+}
+
+/* 슬라이드 페이지네이션 */
+.ourServices .servicesSlide .swiper-pagination {border-radius: 2.6563rem; background: rgba(65, 65, 65, 0.50); box-shadow: 0.25rem 0.25rem 0.625rem 0rem #000; backdrop-filter: blur(0.3125rem); width: 18.9375rem; left: 50%; transform: translateX(-50%); padding: 2.375rem 4.375rem; display: flex; align-items: center; justify-content: center;}
+.swiper-pagination-clickable .swiper-pagination-bullet {width: 0.625rem; height: 0.625rem; background: #D9D9D9; margin: 0 0 !important; display: block;}
+.swiper-pagination-clickable .swiper-pagination-bullet:not(:last-child) {margin-right: 1.25rem !important;}
+.swiper-pagination-bullet-active {width: 2.5625rem !important; border-radius: 0.4375rem !important;}
+
+/* 슬라이드 개별 배경 설정*/
+.ourServices .servicesSlide .slide2 {background: url(../images/slide_01.png) no-repeat bottom right !important;}
+.ourServices .servicesSlide .slide3 {position: relative;}
+.ourServices .servicesSlide .slide3::after {content: ''; display: inline-block; background: url(../images/slide_02.png) no-repeat; position: absolute; left: 5rem; z-index: 9; width: 100%; height: 100%;}
+
+/* 마지막 슬라이드 */
+.ourServices .swiper-slide .descText {height: 15rem; width: auto; overflow-y: auto;}
+.ourServices .swiper-slide .descText .subject {font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5625rem; /* 138.889% */
+    letter-spacing: -0.0313rem;}
+.ourServices .swiper-slide .descText .content {font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1.5625rem;
+    letter-spacing: -0.0313rem;}
+
+.ourServices .swiper-slide .descText .content:not(:last-child) {padding-bottom: 2rem;}
+.ourServices .swiper-slide .descText::-webkit-scrollbar {
+    width: 0.5rem;         /* 가로 스크롤바 높이 */
+    height: 4.3125rem;        /* 세로 스크롤바 너비 */
+}
+.ourServices .swiper-slide .descText::-webkit-scrollbar-track {
+    background: #111; /* 스크롤바 트랙 배경색 */
+    border-radius: 1.25rem;
+}
+.ourServices .swiper-slide .descText::-webkit-scrollbar-thumb {
+    background: #414141; /* 스크롤바 색상 */
+    border-radius: 1.25rem;
+}
+
+/* 하단 sandglass */
+.sandGlass {padding-top: 17rem;}
+.sandGlass .desc {font-size: 2.0625rem; font-style: normal; font-weight: 300; line-height: normal; text-align: center; font-family: 'GmarketSansLight'}
+.sandGlass .title{font-size: 6.875rem; font-family: 'GmarketSansBold'; text-align: center;}
+.sandGlass .mockupImg {max-width: 92.8125rem; width: 100%; height: 68.3125rem; position: relative; left: 55%; transform: translateX(-50%);}
+.sandGlass .mockupImg img {width: 100%;}
+.sandGlass .textBox {font-family: 'Pretendard'; text-align: center; color: #343434;}
+.sandGlass .textBox .num{ font-size: 1.5rem; font-family: 'GmarketSansMedium'; padding-bottom: 16px;}
+.sandGlass .textBox .title{font-family: 'Pretendard'; font-size: 2.25rem; font-weight: 700; letter-spacing: -0.0675rem; padding-bottom: 0.9375rem;}
+.sandGlass .textBox .sub{font-family: 'Pretendard'; font-size: 1.875rem; font-weight: 400; letter-spacing: -0.0563rem; line-height: normal; padding-bottom: 1.75rem;}
+.sandGlass .textBox .desc{font-family: 'Pretendard'; font-size: 1.125rem; font-weight: 400; line-height: 1.5625rem; letter-spacing: -0.0625rem; line-height: 1.5625rem; padding-bottom: 12.6875rem;}
+
+.sandGlass .sloganTitle{color: #6B6B6B; text-align: center; font-size: 1.5rem; font-style: normal; font-weight: 700; line-height: normal }
+.sandGlass .sloganDesc {color: #6B6B6B; text-align: center; font-family: 'Pretendard'; font-size: 1.25rem; font-style: normal; font-weight: 300; line-height: 1.9375rem;}
+.sandGlass .logoText{ color: #6B6B6B; text-align: center; font-family: 'Pretendard'; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.54px; padding-top: 0.8125rem;}
+
+/* caseStudies */
+.caseStudies {background: url(../images/bg_03.png) no-repeat center; padding-top: 10.5rem;}
+.caseStudies .desc {text-align: center; font-family: 'Pretendard'; font-size: 1.875rem; font-style: normal; font-weight: 100; line-height: normal; letter-spacing: -0.0563rem; padding-top: 1rem;}
+
+/* 슬라이드 공통 스타일 */
+.caseStudiesSlide .swiper-wrapper {}
+.caseStudiesSlide .swiper-wrapper .swiper-slide {display: flex;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .case {background: rgba(255, 255, 255, 0.03); border: 2px solid #ACACAC4D  ; font-family: 'Pretendard'; padding: 4.25rem 0 5rem 2.8125rem; width: 22.375rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .case .caseNum{font-size: 20px; font-style: normal; font-weight: 300; line-height: normal;}
+.caseStudiesSlide {padding-bottom: 71px;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .case .company{font-family: "GmarketSansLight"; font-size: 45px; font-style: normal; font-weight: 300; line-height: normal; padding-bottom: 148px;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .case .field{ font-size: 32px; font-style: normal; font-weight: 300; line-height: 32px;}
+.caseStudiesSlide {}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents {font-family: 'Pretendard'; width: 47.3125rem; background: rgba(34, 34, 34, 0.80);box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.20); padding: 10.0625rem 0 3.125rem 3.6875rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText {display: flex; gap: 19px;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solution {color: #61FF83; font-weight: 700; font-size: 18px; font-style: normal; font-weight: 700; line-height: 25px; font-family: 'GmarketSansMedium';}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solutionResult{ font-size: 18px; font-style: normal; font-weight: 400; line-height: 25px;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText {font-size: 18px; font-style: normal; font-weight: 400; line-height: 30px; /* 166.667% */ letter-spacing: -1px; padding-top: 4rem;}
+
+/* 개별 슬라이드 */
+#topSlide {padding: 12.125rem 0 3.4375rem 8.9375rem;}
+#bottomSlide {padding-bottom: 6.4375rem;}
+
+/* 하단 OUR CLIENTS */
+.brandBox {}
+.brandBox .title {font-size: 2rem; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.03rem; text-align: center; padding-bottom: 2.5625rem;}
+.brandBox .name { text-align: center; font-family: 'Pretendard'; font-size: 1.25rem; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: -0.0187rem; }
+.brandBox .name pre:not(:last-child) {padding-bottom: 0.875rem;}
+
+.caseStudies .slideWrap {padding-top: 16.8125rem;}
+.caseStudies .sloganTitle {text-align: center; font-size: 1.5rem; font-style: normal; font-weight: 700; line-height: normal;}
+.caseStudies .sloganDesc {font-family: 'Pretendard'; font-size: 1.25rem; font-style: normal; font-weight: 100; line-height: 1.9375rem; text-align: center; padding-bottom: 1.5rem;}
+.caseStudies .logoText {text-align: center; font-family: 'Pretendard'; font-size: 2.25rem; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.0338rem; padding-bottom: 13.125rem;}
