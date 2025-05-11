@@ -133,6 +133,10 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+
 }
 select::-ms-expand {
     display: none;

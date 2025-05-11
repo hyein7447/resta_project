@@ -67,8 +67,8 @@ header .gnb li a {}
 }
 
 /* slide4 이중 슬라이드 */
-.ourServices .swiper.servicesSlide:not(.mySwiper2) {padding-left: 18.75rem; height: 60rem;}
-.ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) {padding-bottom: 2.4375rem;}
+.ourServices .swiper.servicesSlide:not(.mySwiper2) {padding-left: 18.75rem;}
+.ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) {padding-bottom: 9.4375rem;}
 .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) {background: rgba(43, 43, 43, 0.40); box-shadow: 0.9375rem 0.9375rem 0.9375rem 0rem rgba(0, 0, 0, 0.80); backdrop-filter: blur(0.3125rem); font-family: 'Pretendard'; padding: 83px 38px 0 37px; width: 30.375rem !important; height: 625px !important;}
 .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .num {color: #61FF83; font-size: 1.5rem; font-weight: 400; padding-bottom: 1.9375rem;}
 .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .title {font-size: 2.25rem; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.0675rem; padding-bottom: 1.0625rem;}
@@ -224,9 +224,9 @@ letter-spacing: -0.48px;
 .reviewBox::-webkit-scrollbar-thumb {background: #414141; border-radius: 2rem;}
 
 /* =========================== contactUs =============================== */
-.contactUs {padding-top: 6.0625rem;}
+.contactUs {padding: 6.0625rem 260px 97px; }
 .contactUs .desc {text-align: center; font-family: 'Pretendard'; font-size: 1.875rem; font-style: normal; font-weight: 100; line-height: normal; letter-spacing: -0.0563rem; padding-top: 1rem ;}
-.contactUs .infoBox {display: flex; justify-content: center; gap: 9.0625rem; padding-top: 8.4375rem; padding-bottom: 5rem;}
+.contactUs .infoBox {display: flex; justify-content: space-between; gap: 9.0625rem; padding-top: 8.4375rem; padding-bottom: 5rem;}
 .contactUs .infoBox .promoText {}
 .contactUs .infoBox .promoText .title { color: #61FF83; font-size: 1.25rem; font-family: 'GmarketSansBold'; letter-spacing: -0.0625rem;}
 .contactUs .infoBox .promoText .text {font-family: 'Pretendard'; font-size: 1.5rem; font-style: normal; font-weight: 400; line-height: 2.375rem; letter-spacing: -0.045rem;}
@@ -242,27 +242,86 @@ letter-spacing: -0.48px;
 /* form 영역 */
 .form {}
 .form .userInfo {}
-.form .userInfo .row {display: flex; gap: 1.6875rem;}
+.form .userInfo .row {display: flex; justify-content: space-between;}
+.form .userInfo .row:nth-child(1) {gap: 1.6875rem; margin-bottom: 27px;}
 .form .userInfo .row .userName {}
-.form .userInfo .row .userName .title {padding: 11px 224px 11px 22px;}
+.form .userInfo .row .userName .title {}
 .form .userInfo .row .question {}
 .form .userInfo .row .question option {}
-.form .userInfo .row .userPhone {}
+.form .userInfo .row .userPhone {height: max-content; width: 70%;}
 .form .userInfo .row .userPhone .title {}
 .form .userInfo .row .userPhone .text {}
 
-.form .userInfo .row .submit {}
+.form .userInfo .row .submit {width: 30%;}
+.form .userInfo .row .submit input[type="image"] {width: 100%;}
 
 /* 공통 */
-.form .userInfo .row .title { color: #B3B3B3; font-family: 'Pretendard'; font-size: 1.5rem; font-style: normal; font-weight: 400; line-height: 2.375rem; /* 158.333% */ letter-spacing: -0.045rem; }
+.form .userInfo .row .title {display: block; color: #B3B3B3; font-family: 'Pretendard'; font-size: 1.5rem; font-style: normal; font-weight: 400; line-height: 2.375rem; /* 158.333% */ letter-spacing: -0.045rem; padding: 11px 224px 11px 22px; }
 .form .userInfo .row .title em {color: #61FF83;}
 .form .userInfo .row .text {}
-.form .userInfo .row input {background: none; border: none; outline: none; color: #fff; font-size: 40px; padding-left: 22px; padding-bottom: 26px;}
+.form .userInfo .row input[type="text"] {background: none; border: none; outline: none; color: #fff; font-size: 40px; padding-left: 22px; padding-bottom: 17px;}
 
 .form .userInfo .row .userName,
 .form .userInfo .row .question,
 .form .userInfo .row .userPhone {border: 1px solid #b3b3b3;}
 
 .form .userInfo .row .userName,
-.form .userInfo .row .question {display: flex; flex-flow: column;}
+.form .userInfo .row .question {display: flex; flex-flow: column; width: 852px;}
+.form .userInfo .row .question select {color: #FFF;
+    
+    background: #515151;
+    font-family: 'Pretendard';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: -0.96px;
+}
+.form .userInfo .row .question select option {padding: 26px 0 26px 37px;}
 
+/* 개인정보처리방침 */
+.form .userInfo .agreeBox {padding-top: 27px;} 
+.form .userInfo .agreeBox label { color: #B3B3B3;}
+.form .userInfo .agreeBox label input {
+    border: 1px solid #B3B3B3;
+}
+.form .userInfo .agreeBox label span {font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 29px; /* 181.25% */
+    letter-spacing: -0.48px;}
+.form .userInfo .agreeBox .btn-agreement {
+    color: #B3B3B3;
+font-family: 'Pretendard';
+font-size: 16px;
+font-style: normal;
+font-weight: 800;
+line-height: 29px;
+letter-spacing: -0.48px;
+} 
+.form .userInfo .agreement {}
+
+
+/* footer */
+footer {display: flex; justify-content: space-between; padding: 50px 265px 48px 246px;}
+footer .logo{width: 118px; height: 92px;}
+footer .logo img{width: 100%;}
+footer .contents{}
+footer .contents .desc{padding-bottom: 19px;}
+footer .contents .desc li {
+
+font-family: 'Pretendard';
+font-size: 15px;
+font-style: normal;
+font-weight: 100;
+line-height: 21px;
+}
+footer .gnb {display: flex; gap: 45px;}
+footer .gnb li {
+font-family: "GmarketSansMedium";
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}

@@ -24,6 +24,6 @@ body {font-family: 'GmarketSansMedium'; background: #222; color: #fff; font-size
 .pointColor {color: #f2eb44;}
 
 .wrap {
-  width: 100%;
-  overflow-x: hidden;
+    width: 100%;
+    overflow-x: hidden;
 }

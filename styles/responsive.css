@@ -1,0 +1,4 @@
+@media screen and (max-width: 1200px) {
+    .wrap {font-size: 1.2vw;}
+    header {padding: 2.5rem 6.5rem 2.5rem 6rem;}
+}
