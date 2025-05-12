@@ -15,7 +15,7 @@ header .gnb li a {}
 .legend .text{text-align: center; font-size: 3.4375rem; font-weight: 700; line-height: normal;}
 .slideWrap {display: flex; overflow: hidden;}
 .marquee { display: flex; animation: marqueeAnimation 120s linear infinite; }
-.slideText {text-align: center; font-family: "GmarketSansMedium"; font-size: 21.875rem; font-weight: 700; letter-spacing: -0.3281rem; white-space: nowrap; display: inline-block; padding: 1.625rem 0; line-height: 1;}
+.slideText {text-align: center; font-family: "GmarketSansBold"; font-size: 21.875rem; font-weight: 700; letter-spacing: -0.3281rem; white-space: nowrap; display: inline-block; padding: 1.625rem 0; line-height: 1;}
 
 /* ==============intro =======================*/
 .intro {position: relative;}
@@ -158,6 +158,7 @@ background-size: 70% !important;}
 .caseStudies .desc {text-align: center; font-family: 'Pretendard'; font-size: 1.875rem; font-style: normal; font-weight: 100; line-height: normal; letter-spacing: -0.0563rem; padding-top: 1rem;}
 
 /* 슬라이드 공통 스타일 */
+/* .caseStudiesSlide{opacity: 0; transform: translateX(-80%);} */
 .caseStudiesSlide .swiper-wrapper .swiper-slide {display: flex;}
 .caseStudiesSlide .swiper-wrapper .swiper-slide .case {background: rgba(255, 255, 255, 0.03); border: 0.125rem solid #ACACAC4D  ; font-family: 'Pretendard'; padding: 4.25rem 0 5rem 2.8125rem; width: 22.375rem;}
 .caseStudiesSlide .swiper-wrapper .swiper-slide .case .caseNum{font-size: 1.25rem; font-style: normal; font-weight: 300; line-height: normal; padding-bottom: 4.5rem;}
@@ -171,8 +172,17 @@ background-size: 70% !important;}
 .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText {font-size: 1.125rem; font-style: normal; font-weight: 200; line-height: 1.875rem; /* 166.667% */ letter-spacing: -0.0625rem; padding-top: 4rem;}
 
 /* 개별 슬라이드 */
-#topSlide {padding: 12.125rem 0 3.4375rem 8.9375rem;}
+#topSlide {padding: 12.125rem 0 3.4375rem 14.9375rem;}
 #bottomSlide {padding-bottom: 6.4375rem;}
+#bottomSlide {
+    /* transform: translateX(100%); */
+    justify-content: flex-start;
+}
+
+.activeSlide {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 /* 하단 OUR CLIENTS */
 .brandBox {}
@@ -245,13 +255,15 @@ letter-spacing: -0.03rem;
 .form .userInfo {}
 .form .userInfo .row {display: flex; justify-content: space-between;}
 .form .userInfo .row:nth-child(1) {gap: 1.6875rem; margin-bottom: 1.6875rem;}
-.form .userInfo .row .userName {width: 32.5625rem;}
+.form .userInfo .row .userName {width: 32.5625rem; position: relative;}
 .form .userInfo .row .userName .title {}
 .form .userInfo .row .question {width: 53.25rem;}
 .form .userInfo .row .question option {}
-.form .userInfo .row .userPhone {height: max-content; width: 61.1875rem; height: 7.75rem;}
+.form .userInfo .row .userPhone {height: max-content; width: 61.1875rem; height: 7.75rem; position: relative;}
 .form .userInfo .row .userPhone .title {}
 .form .userInfo .row .userPhone .text {}
+
+.sldieContent {height: 100%;}
 
 .form .userInfo .row .submit {width: calc(100% - 61.1875rem);}
 .form .userInfo .row .submit input[type="image"] {width: 100%;}
@@ -262,6 +274,14 @@ letter-spacing: -0.03rem;
 .form .userInfo .row .text {}
 .form .userInfo .row input[type="text"] {background: none; border: none; outline: none; color: #fff; font-size: 1.5rem; padding-left: 1.375rem; padding-bottom: 1.0625rem; width: 100%;}
 .form .userInfo .row input[type="text"]::placeholder {color: #515151;}
+.form .userInfo .row #nameAlert {position: absolute; top: 40%; left: 5%; 
+color: #61FF83;
+font-family: 'Pretendard';
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 400;
+letter-spacing: -1.2px;
+pointer-events: none;}
 
 .form .userInfo .row .userName,
 .form .userInfo .row .question,
