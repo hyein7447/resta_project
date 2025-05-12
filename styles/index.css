@@ -13,7 +13,7 @@ header .gnb li a {}
 .legend span {display: block;}
 .legend .num{color: #61FF83; font-size: 2rem; font-weight: 700;}
 .legend .text{text-align: center; font-size: 3.4375rem; font-weight: 700; line-height: normal;}
-.slideWrap {display: flex;}
+.slideWrap {display: flex; overflow: hidden;}
 .marquee { display: flex; animation: marqueeAnimation 120s linear infinite; }
 .slideText {text-align: center; font-family: "GmarketSansMedium"; font-size: 21.875rem; font-weight: 700; letter-spacing: -0.3281rem; white-space: nowrap; display: inline-block; padding: 1.625rem 0; line-height: 1;}
 
@@ -40,7 +40,7 @@ header .gnb li a {}
 /* 상단 슬라이드 카드 */
 .ourServices {background: url(../images/bg_05.png) no-repeat center / cover; padding-top: 9.8125rem; padding-bottom: 17rem;}
 .ourServices .servicesSlide {padding-left: 18.75rem; padding-top: 6.25rem;}
-.ourServices .servicesSlide .swiper-wrapper {padding-bottom: 9.0625rem;}
+.ourServices .servicesSlide .servicesSlide_swiper {padding-bottom: 9.0625rem;}
 .ourServices .servicesSlide .swiper-wrapper .swiper-slide {background: rgba(43, 43, 43, 0.40); box-shadow: 0.9375rem 0.9375rem 0.9375rem 0rem rgba(0, 0, 0, 0.80); backdrop-filter: blur(0.3125rem); font-family: 'Pretendard'; padding: 5.1875rem 2.375rem 0 2.3125rem; width: 30.375rem !important; height: 39.0625rem !important;}
 .ourServices .servicesSlide .swiper-slide .num {color: #61FF83; font-size: 1.5rem; font-weight: 400; padding-bottom: 1.9375rem;}
 .ourServices .servicesSlide .swiper-slide .title {font-size: 2.25rem; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.0675rem; padding-bottom: 1.0625rem;}
@@ -68,30 +68,30 @@ header .gnb li a {}
 
 /* slide4 이중 슬라이드 */
 .ourServices .swiper.servicesSlide:not(.mySwiper2) {padding-left: 18.75rem;}
-.ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) {padding-bottom: 9.4375rem;}
-.ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) {background: rgba(43, 43, 43, 0.40); box-shadow: 0.9375rem 0.9375rem 0.9375rem 0rem rgba(0, 0, 0, 0.80); backdrop-filter: blur(0.3125rem); font-family: 'Pretendard'; padding: 83px 38px 0 37px; width: 30.375rem !important; height: 625px !important;}
+/* .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) {padding-bottom: 0.4375rem;} */
+.ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) {background: rgba(43, 43, 43, 0.40); box-shadow: 0.9375rem 0.9375rem 0.9375rem 0rem rgba(0, 0, 0, 0.80); backdrop-filter: blur(0.3125rem); font-family: 'Pretendard'; padding: 5.1875rem 2.375rem 0 2.3125rem; width: 30.375rem !important; height: 39.0625rem !important;}
 .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .num {color: #61FF83; font-size: 1.5rem; font-weight: 400; padding-bottom: 1.9375rem;}
 .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .title {font-size: 2.25rem; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.0675rem; padding-bottom: 1.0625rem;}
 .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .sub { font-size: 1.875rem; font-style: normal; font-weight: 400; line-height: normal; letter-spacing: -0.0563rem; padding-bottom: 1.9375rem;}
 .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .sub .keyColor {font-weight: 700;}
-.ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .desc { font-size: 18px; font-style: normal; font-weight: 400; line-height: 25px; letter-spacing: -1px; }
+.ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .desc { font-size: 1.125rem; font-style: normal; font-weight: 400; line-height: 1.5625rem; letter-spacing: -0.0625rem; }
 .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .desc .keyColor {font-weight: 700;}
-.ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .iconBox {padding-top: 56px; width: 60%;}
+.ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .iconBox {padding-top: 3.5rem; width: 60%;}
 .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .iconBox img {width: 100%;}
-.ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .slideImg {width: 418px; overflow: auto;}
+.ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .slideImg {width: 26.125rem; overflow: auto;}
 .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .slideImg img {width: auto !important;}
-.ourServices .swiper.servicesSlide:not(.mySwiper2) .mySwiperHorizontal .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide)  {height: 277px !important;width: max-content !important;box-sizing: border-box; padding: 0;}
+.ourServices .swiper.servicesSlide:not(.mySwiper2) .mySwiperHorizontal .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide)  {height: 17.3125rem !important;width: max-content !important;box-sizing: border-box; padding: 0;}
 .swiper.mySwiper2 {width: 100%; height: 100%;}
-.swiper.mySwiper2 .swiper-slide {font-size: 18px; height: auto; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 30px;}
-.ourServices .swiper.servicesSlide:not(.mySwiper2) .mySwiperHorizontal .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide)  {height: 277px !important;width: max-content !important;box-sizing: border-box; background: none;
+.swiper.mySwiper2 .swiper-slide {font-size: 1.125rem; height: auto; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 1.875rem;}
+.ourServices .swiper.servicesSlide:not(.mySwiper2) .mySwiperHorizontal .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide)  {height: 17.3125rem !important;width: max-content !important;box-sizing: border-box; background: none;
     box-shadow: none;
     backdrop-filter: none;}
 .swiper.mySwiper2 {width: 100%; height: 100%;}
-.swiper.mySwiper2 .swiper-slide {font-size: 18px; height: auto; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 30px;}
+.swiper.mySwiper2 .swiper-slide {font-size: 1.125rem; height: auto; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 1.875rem;}
 .slideImg.swiper {width: 100%;height: auto;}
 .slideImg .swiper-wrapper {display: flex;}
-.slideImg .swiper-slide {width: auto !important; height: auto; flex-shrink: 0; padding: 0 10px; /* 여백 조절 */}
-.slideImg img {max-height: 300px; /* 이미지 높이 제한 */display: block;}
+.slideImg .swiper-slide {width: auto !important; height: auto; flex-shrink: 0; padding: 0 0.625rem; /* 여백 조절 */}
+.slideImg img {max-height: 18.75rem; /* 이미지 높이 제한 */display: block;}
 .mySwiperHorizontal {pointer-events: auto;}
 .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .slideImg {overflow: hidden;width: 100%;}
 /* 이중슬라이드 스크롤바 */
@@ -105,9 +105,10 @@ header .gnb li a {}
 .swiper-pagination-bullet-active {width: 2.5625rem !important; border-radius: 0.4375rem !important;}
 
 /* 슬라이드 개별 배경 설정*/
-.ourServices .servicesSlide .slide2 {background: url(../images/slide_01.png) no-repeat bottom right !important;}
+.ourServices .servicesSlide .slide2 {background: url(../images/slide_01.png) no-repeat bottom right !important;
+background-size: 70% !important;}
 .ourServices .servicesSlide .slide3 {position: relative;}
-.ourServices .servicesSlide .slide3::after {content: ''; display: inline-block; background: url(../images/slide_02.png) no-repeat; position: absolute; left: 5rem; z-index: 9; width: 100%; height: 100%;}
+.ourServices .servicesSlide .slide3::after {content: ''; display: inline-block; background: url(../images/slide_02.png) no-repeat; background-size: 85%; position: absolute; left: 6rem; z-index: 9; width: 100%; height: 100%;}
 
 /* 마지막 슬라이드 */
 .ourServices .swiper-slide .descText {height: 15rem; width: auto; overflow-y: auto;}
@@ -143,14 +144,14 @@ header .gnb li a {}
 .sandGlass .mockupImg {max-width: 92.8125rem; width: 100%; height: 68.3125rem; position: relative; left: 55%; transform: translateX(-50%);}
 .sandGlass .mockupImg img {width: 100%;}
 .sandGlass .textBox {font-family: 'Pretendard'; text-align: center; color: #343434;}
-.sandGlass .textBox .num{ font-size: 1.5rem; font-family: 'GmarketSansMedium'; padding-bottom: 16px;}
+.sandGlass .textBox .num{ font-size: 1.5rem; font-family: 'GmarketSansMedium'; padding-bottom: 1rem;}
 .sandGlass .textBox .title{font-family: 'Pretendard'; font-size: 2.25rem; font-weight: 700; letter-spacing: -0.0675rem; padding-bottom: 0.9375rem;}
 .sandGlass .textBox .sub{font-family: 'Pretendard'; font-size: 1.875rem; font-weight: 400; letter-spacing: -0.0563rem; line-height: normal; padding-bottom: 1.75rem;}
 .sandGlass .textBox .desc{font-family: 'Pretendard'; font-size: 1.125rem; font-weight: 400; line-height: 1.5625rem; letter-spacing: -0.0625rem; line-height: 1.5625rem; padding-bottom: 12.6875rem;}
 
 .sandGlass .sloganTitle{color: #6B6B6B; text-align: center; font-size: 1.5rem; font-style: normal; font-weight: 700; line-height: normal }
 .sandGlass .sloganDesc {color: #6B6B6B; text-align: center; font-family: 'Pretendard'; font-size: 1.25rem; font-style: normal; font-weight: 300; line-height: 1.9375rem;}
-.sandGlass .logoText{ color: #6B6B6B; text-align: center; font-family: 'Pretendard'; font-size: 36px; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.54px; padding-top: 0.8125rem;}
+.sandGlass .logoText{ color: #6B6B6B; text-align: center; font-family: 'Pretendard'; font-size: 2.25rem; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.0338rem; padding-top: 0.8125rem;}
 
 /* ========================= caseStudies =============================== */
 .caseStudies {background: url(../images/bg_03.png) no-repeat center; padding-top: 10.5rem;}
@@ -158,16 +159,16 @@ header .gnb li a {}
 
 /* 슬라이드 공통 스타일 */
 .caseStudiesSlide .swiper-wrapper .swiper-slide {display: flex;}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .case {background: rgba(255, 255, 255, 0.03); border: 2px solid #ACACAC4D  ; font-family: 'Pretendard'; padding: 4.25rem 0 5rem 2.8125rem; width: 22.375rem;}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .case .caseNum{font-size: 20px; font-style: normal; font-weight: 300; line-height: normal; padding-bottom: 4.5rem;}
-.caseStudiesSlide {padding-bottom: 71px;}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .case .company{font-family: "GmarketSansLight"; font-size: 45px; font-style: normal; font-weight: 300; line-height: normal; padding-bottom: 148px;}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .case .field{ font-size: 32px; font-style: normal; font-weight: 300; line-height: 32px;}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .contents {font-family: 'Pretendard'; width: 47.3125rem; background: rgba(34, 34, 34, 0.80);box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.20); padding: 10.0625rem 0 3.125rem 3.6875rem;}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText {display: flex; gap: 19px;}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solution {color: #61FF83; font-weight: 700; font-size: 18px; font-style: normal; font-weight: 700; line-height: 25px; font-family: 'GmarketSansMedium';}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solutionResult{ font-size: 18px; font-style: normal; font-weight: 200; line-height: 25px;}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText {font-size: 18px; font-style: normal; font-weight: 200; line-height: 30px; /* 166.667% */ letter-spacing: -1px; padding-top: 4rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .case {background: rgba(255, 255, 255, 0.03); border: 0.125rem solid #ACACAC4D  ; font-family: 'Pretendard'; padding: 4.25rem 0 5rem 2.8125rem; width: 22.375rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .case .caseNum{font-size: 1.25rem; font-style: normal; font-weight: 300; line-height: normal; padding-bottom: 4.5rem;}
+.caseStudiesSlide {padding-bottom: 4.4375rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .case .company{font-family: "GmarketSansLight"; font-size: 2.8125rem; font-style: normal; font-weight: 300; line-height: normal; padding-bottom: 9.25rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .case .field{ font-size: 2rem; font-style: normal; font-weight: 300; line-height: 2rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents {font-family: 'Pretendard'; width: 47.3125rem; background: rgba(34, 34, 34, 0.80);box-shadow: 0.625rem 0.625rem 1.25rem 0rem rgba(0, 0, 0, 0.20); padding: 10.0625rem 0 3.125rem 3.6875rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText {display: flex; gap: 1.1875rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solution {color: #61FF83; font-weight: 700; font-size: 1.125rem; font-style: normal; font-weight: 700; line-height: 1.5625rem; font-family: 'GmarketSansMedium';}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solutionResult{ font-size: 1.125rem; font-style: normal; font-weight: 200; line-height: 1.5625rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText {font-size: 1.125rem; font-style: normal; font-weight: 200; line-height: 1.875rem; /* 166.667% */ letter-spacing: -0.0625rem; padding-top: 4rem;}
 
 /* 개별 슬라이드 */
 #topSlide {padding: 12.125rem 0 3.4375rem 8.9375rem;}
@@ -198,19 +199,19 @@ header .gnb li a {}
 .reviewBox .item .profile .company .desc {display: flex; gap: 0.5625rem; padding-top: 0.25rem;}
 .reviewBox .item .profile .company .desc .date {
     font-family: 'Pretendard';
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 100;
 line-height: normal;
-letter-spacing: -0.48px;
+letter-spacing: -0.03rem;
 } 
 .reviewBox .item .profile .company .desc .category {
     font-family: 'Pretendard';
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 400; 
 line-height: normal;
-letter-spacing: -0.48px;
+letter-spacing: -0.03rem;
 } 
 
 .reviewBox .item .comment {} 
@@ -219,12 +220,12 @@ letter-spacing: -0.48px;
 }
 
 /* reviewBox 스크롤바 */
-.reviewBox::-webkit-scrollbar {background: #111;}
+.reviewBox::-webkit-scrollbar {background: #111; width: 0.75rem;}
 .reviewBox::-webkit-scrollbar-track {border-radius: 2rem;}
 .reviewBox::-webkit-scrollbar-thumb {background: #414141; border-radius: 2rem;}
 
 /* =========================== contactUs =============================== */
-.contactUs {padding: 6.0625rem 260px 97px; }
+.contactUs {padding: 6.0625rem 16.25rem 6.0625rem; background: #2b2b2b;}
 .contactUs .desc {text-align: center; font-family: 'Pretendard'; font-size: 1.875rem; font-style: normal; font-weight: 100; line-height: normal; letter-spacing: -0.0563rem; padding-top: 1rem ;}
 .contactUs .infoBox {display: flex; justify-content: space-between; gap: 9.0625rem; padding-top: 8.4375rem; padding-bottom: 5rem;}
 .contactUs .infoBox .promoText {}
@@ -235,92 +236,106 @@ letter-spacing: -0.48px;
 .contactUs .infoBox .info .row {display: flex; gap: 3.25rem; padding-bottom: 1.4375rem;}
 .contactUs .infoBox .info .row .item {display: flex; align-items: center; gap: 1.1875rem;}
 .contactUs .infoBox .info .item {display: flex; align-items: center; gap: 1.1875rem;}
-.contactUs .infoBox .info .row .item .icon {width: 3.3125rem; height: 3.3125rem; display: block;}
-.contactUs .infoBox .info .row .item .icon img {width: 100%;}
+.contactUs .infoBox .info .item .icon {width: 3.3125rem; height: 3.3125rem; display: block;}
+.contactUs .infoBox .info .item .icon img {width: 100%;}
 .contactUs .infoBox .info .row .item .content {font-size: 1.25rem; font-style: normal; font-weight: 500; line-height: 2.1875rem; letter-spacing: -0.0375rem;}
 
 /* form 영역 */
 .form {}
 .form .userInfo {}
 .form .userInfo .row {display: flex; justify-content: space-between;}
-.form .userInfo .row:nth-child(1) {gap: 1.6875rem; margin-bottom: 27px;}
-.form .userInfo .row .userName {}
+.form .userInfo .row:nth-child(1) {gap: 1.6875rem; margin-bottom: 1.6875rem;}
+.form .userInfo .row .userName {width: 32.5625rem;}
 .form .userInfo .row .userName .title {}
-.form .userInfo .row .question {}
+.form .userInfo .row .question {width: 53.25rem;}
 .form .userInfo .row .question option {}
-.form .userInfo .row .userPhone {height: max-content; width: 70%;}
+.form .userInfo .row .userPhone {height: max-content; width: 61.1875rem; height: 7.75rem;}
 .form .userInfo .row .userPhone .title {}
 .form .userInfo .row .userPhone .text {}
 
-.form .userInfo .row .submit {width: 30%;}
+.form .userInfo .row .submit {width: calc(100% - 61.1875rem);}
 .form .userInfo .row .submit input[type="image"] {width: 100%;}
 
 /* 공통 */
-.form .userInfo .row .title {display: block; color: #B3B3B3; font-family: 'Pretendard'; font-size: 1.5rem; font-style: normal; font-weight: 400; line-height: 2.375rem; /* 158.333% */ letter-spacing: -0.045rem; padding: 11px 224px 11px 22px; }
+.form .userInfo .row .title {display: block; color: #B3B3B3; font-family: 'Pretendard'; font-size: 1.5rem; font-style: normal; font-weight: 400; line-height: 2.375rem; /* 158.333% */ letter-spacing: -0.045rem; padding: 0.6875rem 0 0.6875rem 1.375rem; }
 .form .userInfo .row .title em {color: #61FF83;}
 .form .userInfo .row .text {}
-.form .userInfo .row input[type="text"] {background: none; border: none; outline: none; color: #fff; font-size: 40px; padding-left: 22px; padding-bottom: 17px;}
+.form .userInfo .row input[type="text"] {background: none; border: none; outline: none; color: #fff; font-size: 1.5rem; padding-left: 1.375rem; padding-bottom: 1.0625rem; width: 100%;}
+.form .userInfo .row input[type="text"]::placeholder {color: #515151;}
 
 .form .userInfo .row .userName,
 .form .userInfo .row .question,
-.form .userInfo .row .userPhone {border: 1px solid #b3b3b3;}
+.form .userInfo .row .userPhone {border: 0.0625rem solid #b3b3b3;}
 
 .form .userInfo .row .userName,
-.form .userInfo .row .question {display: flex; flex-flow: column; width: 852px;}
-.form .userInfo .row .question select {color: #FFF;
-    
-    background: #515151;
+.form .userInfo .row .question {display: flex; flex-flow: column;}
+.form .userInfo .row .question select {
+    color: #515151;
+    background: url(../images/icon_arrow.png) no-repeat right;
+    background-size: 1.5rem 1.25rem;
     font-family: 'Pretendard';
-    font-size: 32px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 38px;
-    letter-spacing: -0.96px;
+    line-height: 2.375rem;
+    letter-spacing: -0.06rem;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
 }
-.form .userInfo .row .question select option {padding: 26px 0 26px 37px;}
+.form .userInfo .row .question select:disabled {color: #fff;}
+
+.form .userInfo .row .question select option {
+    color: #fff;
+    padding: 1.625rem 0 1.625rem 2.3125rem; background: #515151;
+    padding: 0 1rem;
+    width: calc(100% - 2rem);
+    box-sizing: border-box;
+    margin: 0 auto ;
+}
+/* .form .userInfo .row .question select option:nth-child(1) {color: #b3b3b3;} */
 
 /* 개인정보처리방침 */
-.form .userInfo .agreeBox {padding-top: 27px;} 
+.form .userInfo .agreeBox {padding-top: 1.6875rem;} 
 .form .userInfo .agreeBox label { color: #B3B3B3;}
 .form .userInfo .agreeBox label input {
-    border: 1px solid #B3B3B3;
+    border: 0.0625rem solid #B3B3B3;
 }
 .form .userInfo .agreeBox label span {font-family: 'Pretendard';
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 100;
-    line-height: 29px; /* 181.25% */
-    letter-spacing: -0.48px;}
+    line-height: 1.8125rem; /* 181.25% */
+    letter-spacing: -0.03rem;}
 .form .userInfo .agreeBox .btn-agreement {
     color: #B3B3B3;
 font-family: 'Pretendard';
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 800;
-line-height: 29px;
-letter-spacing: -0.48px;
+line-height: 1.8125rem;
+letter-spacing: -0.03rem;
 } 
 .form .userInfo .agreement {}
 
 
 /* footer */
-footer {display: flex; justify-content: space-between; padding: 50px 265px 48px 246px;}
-footer .logo{width: 118px; height: 92px;}
+footer {display: flex; justify-content: space-between; padding: 3.125rem 16.5625rem 3rem 15.375rem; background: #222;}
+footer .logo{width: 7.375rem; height: 5.75rem;}
 footer .logo img{width: 100%;}
 footer .contents{}
-footer .contents .desc{padding-bottom: 19px;}
+footer .contents .desc{padding-bottom: 1.1875rem;}
 footer .contents .desc li {
 
 font-family: 'Pretendard';
-font-size: 15px;
+font-size: 0.9375rem;
 font-style: normal;
 font-weight: 100;
-line-height: 21px;
+line-height: 1.3125rem;
 }
-footer .gnb {display: flex; gap: 45px;}
+footer .gnb {display: flex; gap: 2.8125rem;}
 footer .gnb li {
 font-family: "GmarketSansMedium";
-font-size: 14px;
+font-size: 0.875rem;
 font-style: normal;
 font-weight: 700;
 line-height: normal;

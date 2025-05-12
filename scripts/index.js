@@ -19,6 +19,17 @@ var swiper = new Swiper(".servicesSlide", {
         clickable: true,
         dynamicBullets: false,
     },
+    breakpoints: {
+        430: {
+            spaceBetween: 50,
+        },
+        395: {
+            spaceBetween: 30,
+        },
+        320: {
+            spaceBetween: 20,
+        }
+    },
 });
 
 // ourServices slide4 이중 슬라이드
@@ -45,6 +56,17 @@ var swiperHorizontal = new Swiper(".mySwiperHorizontal", {
 var swiper = new Swiper("#topSlide", {
     slidesPerView: '1.5',
     spaceBetween: 70,
+    breakpoints: {
+        430: {
+            spaceBetween: 30,
+        },
+        395: {
+            spaceBetween: 20,
+        },
+        320: {
+            spaceBetween: 10,
+        }
+    },
 });
 
 // bottomSlide
@@ -52,4 +74,21 @@ var swiper = new Swiper("#bottomSlide", {
     slidesPerView: 'auto',
     slidesPerView: '1.5',
     spaceBetween: 70,
+    breakpoints: {
+        430: {
+            spaceBetween: 30,
+        },
+        395: {
+            spaceBetween: 20,
+        },
+        320: {
+            spaceBetween: 10,
+        }
+    },
+});
+
+
+// select option 선택시 컬러변경
+$('select').on('change', function() {
+    $(this).css('color', '#fff');
 });

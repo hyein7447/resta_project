@@ -1,4 +1,19 @@
 @media screen and (max-width: 1200px) {
-    .wrap {font-size: 1.2vw;}
+    .wrap {font-size: 0.9vw;}
     header {padding: 2.5rem 6.5rem 2.5rem 6rem;}
+}
+
+@media screen and (max-width: 780px) {
+    .wrap {font-size: 1.2vw;}
+}
+
+@media screen and (max-width: 430px) {
+    html { font-size: 62.5%; } 
+    html, body { width: 100%; }
+    .wrap {font-size: 2vw;}
+    .slogan { margin: 12.9375rem 0 12.375rem 0;}
+    .ourServices .servicesSlide .servicesSlide_swiper { padding-bottom: 11.0625rem; }
+    .caseStudiesSlide .swiper-wrapper br {display: none;}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText {font-size: 1.6vw; word-break: keep-all; line-height: 1.5;
+    letter-spacing: 1px;}
 }

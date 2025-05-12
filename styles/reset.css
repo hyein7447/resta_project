@@ -28,7 +28,7 @@ footer, header, menu, nav, section, picture, source {
 body {
     line-height: 1.5;
     box-sizing: border-box;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* box-sizng 꼭 체크할 것 */
 }
 *,
