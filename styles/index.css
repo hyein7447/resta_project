@@ -1,10 +1,96 @@
 /* header */
-header {max-width: 120rem; padding: 2.5rem 17.5rem 2.5rem 15rem; background: rgba(2, 2, 2, 0.5); border-bottom-left-radius: 2.5rem; border-bottom-right-radius: 2.5rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 9;}
-header .logo {width: 7.375rem;}
-header .logo img {width: 100%;}
-header .gnb {display: flex; align-items: center; gap: 6.25rem;}
-header .gnb li {}
-header .gnb li a {}
+/* pc 버전 */
+header {position: sticky; top: 0; z-index: 9;}
+header .pc {max-width: 120rem; padding: 2.5rem 17.5rem 2.5rem 15rem; background: rgba(2, 2, 2, 0.5); border-bottom-left-radius: 2.5rem; border-bottom-right-radius: 2.5rem; display: flex; align-items: center; justify-content: space-between; display: none;}
+header .pc .logo {width: 7.375rem;}
+header .pc .logo img {width: 100%;}
+header .pc .gnb {display: flex; align-items: center; gap: 6.25rem;}
+header .pc .gnb li {}
+header .pc .gnb li a {}
+
+/* mo 버전 */
+.mo {
+    background: rgba(2, 2, 2, 0.5);
+    border-radius: 0rem 0rem 2rem 4rem;
+    /* height: 4.9375rem; */
+    padding: 3.3125rem 0;
+    position: relative;
+
+}
+.mo .menu {
+    position: relative;
+}
+.mo .menu .menuIcon {
+    padding-left: 3.8125rem;
+}
+.mo .menu .menuIcon img{
+}
+.mo .menu .logo {
+    display: block;
+    width: 8.75rem;
+    height: 2.4375rem; 
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mo .menu .logo img {width: 100%;}
+
+.mo .gnbBox {
+    padding: 11.2rem 3.7rem 3.3rem;
+    background: rgba(34, 34, 34, 0.50);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom-right-radius: 2rem;
+    z-index: -1;
+    display: none;
+}
+.mo .gnbBox::after {
+
+}
+.mo .gnb {}
+.mo .gnb li {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+    padding-bottom: 2.5rem;
+}
+.mo .gnb li:not(:nth-child(4)){margin-bottom: 2.2rem;}
+
+.mo .gnb li .gnbNum {
+    color: #61FF83;
+    font-family: "GmarketSansBold";
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.mo .gnb li a {
+
+    font-family: "GmarketSansMedium";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.mo .gnbBox .desc p {
+    color: #61FF83;
+    font-size: 1.6rem;
+    border: none;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-top: 8.8rem;
+}
+.mo .gnbBox .desc div {width: 5.6rem; height: 1.4rem; padding-top: 0.9rem;}
+.mo .gnbBox .desc div img {width: 100%;}
 
 /* main 영역 */
 
@@ -20,12 +106,12 @@ header .gnb li a {}
 /* ==============intro =======================*/
 .intro {position: relative;}
 .intro .videoBox {border-radius: 2.5rem; overflow: hidden; padding: 0 5.3125rem; }
-.intro #location {width: 100%; margin: 0 auto; border-radius:  2.5rem; overflow: cover;}
+.intro #location {width: 100%; margin: 0 auto; border-radius:  2.5rem;}
 .intro .textContents {position: absolute; top: 50%; transform: translateY(-50%); left: 13%;}
-.intro .textContents .title {font-size: 3rem; font-weight: 700; letter-spacing: -0.0313rem; line-height: 3.4375rem; margin-bottom: 0.6875rem; position: relative;}
+.intro .textContents .title {font-size: 3rem; font-weight: 700; letter-spacing: -0.0313rem; line-height: 3.4375rem; margin-bottom: 0.6875rem; position: relative; display: flex; flex-flow: row wrap; width: 75%;}
 .intro .textContents .title::after {content: ''; display: inline-block; background: url(../images/img_05.png) no-repeat; width: 100%; height: 100%; position: absolute; left: 13.75rem; top: 1.25rem; background-size: 100%;}
 .intro .textContents .sub {font-size: 2.25rem; font-family: 'pretendard'; font-weight: 700; line-height: 3rem; letter-spacing: -0.0938rem; margin-bottom: 0.5625rem;}
-.intro .textContents .desc {font-size: 1.125rem; font-family: 'pretendard'; font-weight: 400; line-height: 1.5625rem; letter-spacing: -0.0625rem;}
+.intro .textContents .desc {font-size: 1.125rem; font-family: 'pretendard'; font-weight: 100; line-height: 1.5625rem; letter-spacing: -0.0625rem;}
 
 /* slogan */
 .slogan {margin: 17.9375rem 0 17.375rem 0; overflow: hidden; }
@@ -160,15 +246,15 @@ background-size: 70% !important;}
 /* 슬라이드 공통 스타일 */
 /* .caseStudiesSlide{opacity: 0; transform: translateX(-80%);} */
 .caseStudiesSlide .swiper-wrapper .swiper-slide {display: flex;}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .case {background: rgba(255, 255, 255, 0.03); border: 0.125rem solid #ACACAC4D  ; font-family: 'Pretendard'; padding: 4.25rem 0 5rem 2.8125rem; width: 22.375rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .case {background: rgba(255, 255, 255, 0.03); border: 0.125rem solid #ACACAC4D  ; font-family: 'Pretendard'; padding: 4.25rem 0 5rem 2.8125rem; width: 22.375rem; flex-shrink: 0;}
 .caseStudiesSlide .swiper-wrapper .swiper-slide .case .caseNum{font-size: 1.25rem; font-style: normal; font-weight: 300; line-height: normal; padding-bottom: 4.5rem;}
 .caseStudiesSlide {padding-bottom: 4.4375rem;}
 .caseStudiesSlide .swiper-wrapper .swiper-slide .case .company{font-family: "GmarketSansLight"; font-size: 2.8125rem; font-style: normal; font-weight: 300; line-height: normal; padding-bottom: 9.25rem;}
 .caseStudiesSlide .swiper-wrapper .swiper-slide .case .field{ font-size: 2rem; font-style: normal; font-weight: 300; line-height: 2rem;}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .contents {font-family: 'Pretendard'; width: 47.3125rem; background: rgba(34, 34, 34, 0.80);box-shadow: 0.625rem 0.625rem 1.25rem 0rem rgba(0, 0, 0, 0.20); padding: 10.0625rem 0 3.125rem 3.6875rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents {font-family: 'Pretendard'; width: 47.3125rem; background: rgba(34, 34, 34, 0.80);box-shadow: 0.625rem 0.625rem 1.25rem 0rem rgba(0, 0, 0, 0.20); padding: 10.0625rem 0 3.125rem 3.6875rem; flex-shrink: 0;}
 .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText {display: flex; gap: 1.1875rem;}
 .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solution {color: #61FF83; font-weight: 700; font-size: 1.125rem; font-style: normal; font-weight: 700; line-height: 1.5625rem; font-family: 'GmarketSansMedium';}
-.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solutionResult{ font-size: 1.125rem; font-style: normal; font-weight: 200; line-height: 1.5625rem;}
+.caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solutionResult{ font-size: 1.125rem; font-style: normal; font-weight: 100; line-height: 1.5625rem;}
 .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText {font-size: 1.125rem; font-style: normal; font-weight: 200; line-height: 1.875rem; /* 166.667% */ letter-spacing: -0.0625rem; padding-top: 4rem;}
 
 /* 개별 슬라이드 */
@@ -188,7 +274,7 @@ background-size: 70% !important;}
 .brandBox {}
 .brandBox .title {font-size: 2rem; font-style: normal; font-weight: 700; line-height: normal; letter-spacing: -0.03rem; text-align: center; padding-bottom: 2.5625rem;}
 .brandBox .name { text-align: center; font-family: 'Pretendard'; font-size: 1.25rem; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: -0.0187rem; }
-.brandBox .name pre:not(:last-child) {padding-bottom: 0.875rem;}
+.brandBox .name p:not(:last-child) {padding-bottom: 0.875rem;}
 
 .caseStudies .slideWrap {padding-top: 16.8125rem;}
 .caseStudies .sloganTitle {text-align: center; font-size: 1.5rem; font-style: normal; font-weight: 700; line-height: normal;}
@@ -234,6 +320,83 @@ letter-spacing: -0.03rem;
 .reviewBox::-webkit-scrollbar-track {border-radius: 2rem;}
 .reviewBox::-webkit-scrollbar-thumb {background: #414141; border-radius: 2rem;}
 
+
+/* reviewBox 모바일버전 슬라이드 */
+.reviewBoxMo {padding: 0 2.6rem; position: relative;}
+.reviewBoxMo .swiper {position: static;}
+.reviewBoxMo .swiper-wrapper {}
+.reviewBoxMo .swiper-wrapper .swiper-slide {
+    background: #454545;
+    border-radius: 1.9rem;
+    height: 42.1rem !important;
+}
+.swiper-button-next, .swiper-button-prev {
+    width: calc(var(--swiper-navigation-size) / 100 * 22);
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 22px; color: rgba(255, 255, 255, 0.5);
+}
+.reviewBoxMo .swiper-slide .item {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5% 0;
+}
+.reviewBoxMo .swiper-slide .item .profile {
+    display: flex; 
+    align-items: center; 
+    gap: 1.6rem;
+    padding-bottom: 7.5rem;
+}
+.reviewBoxMo .swiper-slide .item .profile .personImg {width: 6.3rem;}
+.reviewBoxMo .swiper-slide .item .profile .personImg img {width: 100%;}
+.reviewBoxMo .swiper-slide .item .profile .company {}
+.reviewBoxMo .swiper-slide .item .company .name {
+    font-family: 'Pretendard';
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.66px;
+}
+.reviewBoxMo .swiper-slide .item .company .desc{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.reviewBoxMo .swiper-slide .item .company .desc .date {
+    font-family: 'Pretendard';
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    letter-spacing: -0.33px;
+}
+.reviewBoxMo .swiper-slide .item .company .desc .category {
+    font-family: 'Pretendard';
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.33px;
+}
+
+.reviewBoxMo .swiper-slide .item .comment {}
+.reviewBoxMo .swiper-slide .item .comment .headline {
+    font-size: 2rem;
+    padding-bottom: 1.3rem;
+    font-family: 'Pretendard';
+    font-weight: 500;
+}
+.reviewBoxMo .swiper-slide .item .comment .content {
+    font-size: 1.4rem;
+    font-family: 'Pretendard';
+    font-weight: 100;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+.reviewBoxMo .swiper-slide .item .comment .content br {display: none;}
+
+
 /* =========================== contactUs =============================== */
 .contactUs {padding: 6.0625rem 16.25rem 6.0625rem; background: #2b2b2b;}
 .contactUs .desc {text-align: center; font-family: 'Pretendard'; font-size: 1.875rem; font-style: normal; font-weight: 100; line-height: normal; letter-spacing: -0.0563rem; padding-top: 1rem ;}
@@ -253,13 +416,13 @@ letter-spacing: -0.03rem;
 /* form 영역 */
 .form {}
 .form .userInfo {}
-.form .userInfo .row {display: flex; justify-content: space-between;}
+.form .userInfo .row {display: flex; justify-content: space-between; height: 7.6875rem;}
 .form .userInfo .row:nth-child(1) {gap: 1.6875rem; margin-bottom: 1.6875rem;}
 .form .userInfo .row .userName {width: 32.5625rem; position: relative;}
 .form .userInfo .row .userName .title {}
 .form .userInfo .row .question {width: 53.25rem;}
 .form .userInfo .row .question option {}
-.form .userInfo .row .userPhone {height: max-content; width: 61.1875rem; height: 7.75rem; position: relative;}
+.form .userInfo .row .userPhone {display: flex; flex-flow: column; gap: 0.5rem; height: 100%; width: 61.1875rem; position: relative;}
 .form .userInfo .row .userPhone .title {}
 .form .userInfo .row .userPhone .text {}
 
@@ -269,10 +432,10 @@ letter-spacing: -0.03rem;
 .form .userInfo .row .submit input[type="image"] {width: 100%;}
 
 /* 공통 */
-.form .userInfo .row .title {display: block; color: #B3B3B3; font-family: 'Pretendard'; font-size: 1.5rem; font-style: normal; font-weight: 400; line-height: 2.375rem; /* 158.333% */ letter-spacing: -0.045rem; padding: 0.6875rem 0 0.6875rem 1.375rem; }
+.form .userInfo .row .title {display: block; color: #B3B3B3; font-family: 'Pretendard'; font-size: 1.5rem; font-style: normal; font-weight: 400; line-height: 2.375rem; /* 158.333% */ letter-spacing: -0.045rem; padding: 0.6875rem 0 0.0 1.375rem; }
 .form .userInfo .row .title em {color: #61FF83;}
 .form .userInfo .row .text {}
-.form .userInfo .row input[type="text"] {background: none; border: none; outline: none; color: #fff; font-size: 1.5rem; padding-left: 1.375rem; padding-bottom: 1.0625rem; width: 100%;}
+.form .userInfo .row input[type="text"] {background: none; border: none; outline: none; color: #fff; font-size: 1.5rem; padding-left: 1.375rem; width: 100%; height: 3.125rem;}
 .form .userInfo .row input[type="text"]::placeholder {color: #515151;}
 .form .userInfo .row #nameAlert {position: absolute; top: 40%; left: 5%; 
 color: #61FF83;
@@ -282,13 +445,33 @@ font-style: normal;
 font-weight: 400;
 letter-spacing: -1.2px;
 pointer-events: none;}
+.form .userInfo .row #phoneAlert{
+    position: absolute; top: 40%; left: 2%; 
+    color: #61FF83;
+font-family: 'Pretendard';
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 400;
+letter-spacing: -1.2px;
+pointer-events: none;
+}
+.form .userInfo #selectAlert {
+    position: absolute; top: 40%; left: 2%; 
+    color: #61FF83;
+font-family: 'Pretendard';
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 400;
+letter-spacing: -1.2px;
+pointer-events: none;
+}
 
 .form .userInfo .row .userName,
 .form .userInfo .row .question,
 .form .userInfo .row .userPhone {border: 0.0625rem solid #b3b3b3;}
 
 .form .userInfo .row .userName,
-.form .userInfo .row .question {display: flex; flex-flow: column;}
+.form .userInfo .row .question {display: flex; flex-flow: column; gap: 0.5rem; position: relative;}
 .form .userInfo .row .question select {
     color: #515151;
     background: url(../images/icon_arrow.png) no-repeat right;
@@ -301,6 +484,7 @@ pointer-events: none;}
     letter-spacing: -0.06rem;
     width: calc(100% - 2rem);
     margin: 0 auto;
+    height: 3.125rem;
 }
 .form .userInfo .row .question select:disabled {color: #fff;}
 
@@ -315,18 +499,25 @@ pointer-events: none;}
 /* .form .userInfo .row .question select option:nth-child(1) {color: #b3b3b3;} */
 
 /* 개인정보처리방침 */
-.form .userInfo .agreeBox {padding-top: 1.6875rem;} 
-.form .userInfo .agreeBox label { color: #B3B3B3;}
-.form .userInfo .agreeBox label input {
+.form .userInfo .agBox {padding-top: 1.6875rem; display: flex; align-items: center; gap: 1rem;}
+.form .userInfo .agBox label { color: #B3B3B3; display: flex; align-items: center;}
+.form .userInfo .agBox label input {
+    appearance: none;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background: transparent;
     border: 0.0625rem solid #B3B3B3;
+    position: relative;
+    top: -2px;
 }
-.form .userInfo .agreeBox label span {font-family: 'Pretendard';
+.form .userInfo .agBox label input:checked {background: #61FF83; border: none;}
+.form .userInfo .agBox label span {font-family: 'Pretendard';
     font-size: 1rem;
     font-style: normal;
     font-weight: 100;
     line-height: 1.8125rem; /* 181.25% */
     letter-spacing: -0.03rem;}
-.form .userInfo .agreeBox .btn-agreement {
+.form .userInfo .agBox .btn-agreement {
     color: #B3B3B3;
 font-family: 'Pretendard';
 font-size: 1rem;
@@ -334,8 +525,15 @@ font-style: normal;
 font-weight: 800;
 line-height: 1.8125rem;
 letter-spacing: -0.03rem;
-} 
-.form .userInfo .agreement {}
+}
+.form .agBox a{font-weight:bold;}
+.form .agreement{display:none; box-sizing:border-box; width:100%; background-color:#363636; border:1px solid #a3a3a3; border-radius:3px; padding:5px; margin:15px auto; display: none;
+padding: 1rem; font-family: 'Pretendard';}
+.form .agreement.popup{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
+.form .agreement .button{float:right; font-size:75%; border:1px solid #000; border-radius:0px; background-color:#efefef; padding:4px 8px; margin:3px; color: #000;}
+.form .agreement h3{font-size:80%; margin:0; padding:0 0 1%;}
+.form .agreement ol li{line-height:1.2; font-size:75%;}
+.form .agreement ol li.desc{line-height:2;}
 
 
 /* footer */

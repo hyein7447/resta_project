@@ -1,19 +1,140 @@
+@media screen and (max-width: 1920px) {
+    .intro .textContents .sub br:nth-child(2){display: none;}
+    .intro .textContents .desc br:nth-child(2){display: none;}
+    .reviewBoxMo {display: none;}
+
+}
+
 @media screen and (max-width: 1200px) {
     .wrap {font-size: 0.9vw;}
-    header {padding: 2.5rem 6.5rem 2.5rem 6rem;}
+    header .pc {padding: 2.5rem 6.5rem 2.5rem 6rem;}
 }
 
 @media screen and (max-width: 780px) {
     .wrap {font-size: 1.2vw;}
+    #topSlide {padding: 2rem 2.6rem;}
+    #bottomSlide {padding: 2rem 2.6rem;}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide {
+        flex-flow: column;
+    }
+    .reviewBox {display: none;}
+    .reviewBoxMo {display: block;}
 }
 
 @media screen and (max-width: 430px) {
     html { font-size: 62.5%; } 
     html, body { width: 100%; }
     .wrap {font-size: 2vw;}
+    .legend .text { font-size: 2.4375rem;}
     .slogan { margin: 12.9375rem 0 12.375rem 0;}
-    .ourServices .servicesSlide .servicesSlide_swiper { padding-bottom: 11.0625rem; }
-    .caseStudiesSlide .swiper-wrapper br {display: none;}
-    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText {font-size: 1.6vw; word-break: keep-all; line-height: 1.5;
-    letter-spacing: 1px;}
+    .ourServices .servicesSlide .servicesSlide_swiper { padding-bottom: 9.0625rem; }
+    .caseStudiesSlide .swiper-wrapper br {}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText {
+        font-size: 1.6vw; 
+        word-break: keep-all; 
+        line-height: 1.5;
+        letter-spacing: 1px;
+        padding-top: 3.8rem;
+        font-size: 1.4rem;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText br {display: none;}
+    
+    .intro .videoBox {
+        padding: 0;
+        border-radius: 0;
+    }
+    .intro #location {
+        width: 250%; padding: 0;
+        background-position: center;
+        border-radius: 0;
+    }
+    .intro .textContents {left: 8%;}
+    .intro .textContents .title {
+        width: 59%;
+        margin-bottom: 8.5rem;
+    }
+    .intro .textContents .title::after {
+        left: -10rem;
+        top: 8.25rem;
+        width: 180%;
+    }
+    .intro .textContents .sub {
+        width: 70%; 
+        font-size: 2.4rem;
+        line-height: 1.3;
+    }
+    .intro .textContents .sub br:nth-child(1) {display: none;}
+    .intro .textContents .sub br:nth-child(2) {display: block;}
+
+    .intro .textContents .desc {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        letter-spacing: 0;
+    }
+    .intro .textContents .desc br:nth-child(2){display: block;}
+
+    .slideText {font-size: 11.875rem;}
+    .sandGlass .textBox .desc {padding-bottom: 4.6875rem;}
+    .ourServices {
+        padding-top: 6.8125rem; 
+        background: url(../images/bg_05.png) no-repeat top center / cover;
+        padding-bottom: 10rem;
+    }
+    
+    .ourServices .servicesSlide {padding-top: 2.25rem;}
+    .ourServices .servicesSlide .swiper-pagination {padding: 1.375rem 4.375rem;}
+    .sandGlass {padding-top: 5rem;}
+    .sandGlass .title {font-size: 3.875rem;}
+    .sandGlass .desc { font-size: 1.5625rem;}
+    .sandGlass .mockupImg {height: auto;}
+
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .case {
+        width: auto;
+        padding: 3.2rem 9.6rem 3.3rem 3.1rem;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .case .caseNum {
+        font-size: 1.8rem;
+        padding-bottom: 1.18rem;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .case .company {
+        font-size: 3.2rem;
+        padding-bottom: 0.7rem;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .case .field {
+        font-size: 1.8rem;
+        font-weight: 100;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents {
+        width: auto;
+        padding: 3.9rem 2.6rem 4.2rem 2.7rem;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solution {
+        font-size: 1.2rem;
+        
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solutionResult {
+        font-size: 1.2rem;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solutionResult br {display: none;}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText {gap: 1.335rem;}
+
+    .brandBox .name  {padding: 0 10%;}
+    .brandBox .name p {
+        font-size: 1.4rem;
+        word-break: keep-all;
+    }
+    .caseStudies .slideWrap {padding-top: 6.8125rem;}
+    .caseStudies .sldieContent {}
+
+    .reviewBox .item {flex-flow: column;}
+
+    .contactUs {padding: 3rem 0 0 0;}
+    .contactUs .infoBox {
+        flex-flow: column;
+        padding: 3rem ;
+    }
+    .contactUs .infoBox .promoText .text {word-break: keep-all;}
+    .contactUs .infoBox .promoText .text br{display: none;}
+
+    footer {padding: 0;}
 }
