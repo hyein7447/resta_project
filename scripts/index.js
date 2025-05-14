@@ -61,28 +61,44 @@ var swiperHorizontal = new Swiper(".mySwiperHorizontal", {
 // topSlide
 var swiper = new Swiper("#topSlide", {
     slidesPerView: '1.3',
-    spaceBetween: 70,
+    spaceBetween: 300,
     breakpoints: {
-        781: {
+        721: {
             slidesPerView: '1.5',  // 780px 이상에서는 1.5개 슬라이드 표시
-            spaceBetween: 70,
+            spaceBetween: 300,
             navigation: false,  // 버튼 숨김
         },
-        780: {
+        720: {
             slidesPerView: '1',
             centeredSlides: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
         },
         430: {
             slidesPerView: '1',
             centeredSlides: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
         },
         395: {
             slidesPerView: '1',
             centeredSlides: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
         },
         320: {
             slidesPerView: '1',
             centeredSlides: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
         }
     },
 });
@@ -93,12 +109,12 @@ var swiper = new Swiper("#bottomSlide", {
     slidesPerView: '1.5',
     spaceBetween: 70,
     breakpoints: {
-        781: {
+        721: {
             slidesPerView: '1.5',  // 780px 이상에서는 1.5개 슬라이드 표시
             spaceBetween: 70,
             navigation: false,  // 버튼 숨김
         },
-        780: {
+        720: {
             slidesPerView: '1',
             centeredSlides: true,
             navigation: {
@@ -164,79 +180,132 @@ $(document).ready(function() {
     });
 });
 
-// servicesSlide 스크롤이동 시 동작
+// ourServicesSlide 스크롤이동 시 동작
 $(document).ready(function () {
     gsap.registerPlugin(ScrollTrigger);
-    const translate = gsap.fromTo(".servicesSlide .swiper-wrapper", 
-        { x: "0", duration: 1.2,}, 
-        { 
-            x: "-19.9375rem", 
-            opacity: 1, 
-            duration: 1.2,
-            ease: "power2.out",
-        },
-    );
-    
-    ScrollTrigger.create({
-        trigger: ".servicesSlide",
-        start: "top 10%", // topSlide 화면의 80% 지점에 도달하면 시작
-        end: "bottom center",
-        toggleActions: "play none none reverse",
-        animation: translate,
-        // markers: true 
+
+    // 이동 거리 설정 함수
+    function getTranslateX() {
+        return window.innerWidth <= 720 ? "3rem" : "-19.9375rem";
+    }
+
+    // ScrollTrigger start/end 설정 함수
+    function getStartEnd() {
+        if (window.innerWidth <= 720) {
+            return {
+                start: "top 30%",  // 780px 이하일 때
+                end: "bottom center"
+            };
+        } else {
+            return {
+                start: "top 10%",  // 기본 설정
+                end: "bottom center"
+            };
+        }
+    }
+
+    // 애니메이션 설정 함수
+    function createTranslateAnimation() {
+        return gsap.fromTo(".servicesSlide .swiper-wrapper", 
+            { x: "8rem" }, 
+            { 
+                // x: getTranslateX(),
+                x:'0%', 
+                // paddingLeft: "1.5rem",
+                duration: 1.2,
+                ease: "power2.out",
+            }
+        );
+    }
+
+    // ScrollTrigger 생성 함수
+    function createScrollTrigger() {
+        // 기존 ScrollTrigger 제거
+        ScrollTrigger.getAll().forEach(trigger => {
+            if (trigger.vars.trigger === ".servicesSlide") {
+                trigger.kill();
+            }
+        });
+
+        // 애니메이션 생성
+        const translate = createTranslateAnimation();
+        const { start, end } = getStartEnd();  // 반응형 start/end 가져오기
+
+        // ScrollTrigger 생성
+        ScrollTrigger.create({
+            trigger: ".servicesSlide",
+            start: start,   // 반응형으로 시작 위치 설정
+            end: end,       // 반응형으로 종료 위치 설정
+            toggleActions: "play none none reverse",
+            animation: translate,
+            // markers: true  // 디버깅용 마커 (필요 시 활성화)
+        });
+    }
+
+    // 초기 실행
+    createScrollTrigger();
+
+    // 창 크기 변경 시 트리거 다시 설정
+    $(window).on('resize', function () {
+        createScrollTrigger();
     });
-})
+});
+
 
 // caseStudies 스크롤이동 시 동작
 $(document).ready(function () {
     // GSAP 등록
     gsap.registerPlugin(ScrollTrigger);
 
-    // 화면 너비에 따른 애니메이션 활성화 조건
-    function createScrollTriggers() {
-        // 기존 ScrollTrigger를 모두 제거하여 중복 방지
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    // ScrollTrigger 생성 함수
+    function createResponsiveTriggers() {
+        // 기존 ScrollTrigger 제거
+        ScrollTrigger.getAll().forEach(trigger => {
+            if (trigger.vars.trigger === "#topSlide" || trigger.vars.trigger === "#bottomSlide") {
+                trigger.kill();
+            }
+        });
 
-        // 화면 너비가 780px 이하일 경우 애니메이션 비활성화
-        if (window.innerWidth <= 780) return;
+        // 화면 너비가 720px 이하이면 ScrollTrigger 비활성화
+        if (window.innerWidth <= 720) return;
 
         // topSlide 애니메이션 (왼쪽 → 오른쪽)
         const tween1 = gsap.fromTo("#topSlide .swiper-wrapper",
-            { x: "33.5625rem", duration: 1.2, }, 
+            { x: "33.5625rem", opacity: 0 },
             { 
-                x: "-6.9375rem", 
-                opacity: 1, 
+                x: "-6.9375rem",
+                opacity: 1,
                 duration: 1.2,
-                ease: "power2.out",
+                ease: "power2.out"
             }
         );
 
         // bottomSlide 애니메이션 (오른쪽 → 왼쪽)
         const tween2 = gsap.fromTo("#bottomSlide .swiper-wrapper",
-            { x: "-55.4375rem", duration: 1.2, }, 
+            { x: "-55.4375rem", opacity: 0 },
             { 
-                x: "0", 
-                opacity: 1, 
+                x: "0",
+                opacity: 1,
                 duration: 1.2,
                 ease: "power2.out"
             },
-            "+=0.2"
+            "+=0.2" // topSlide 완료 후 약간의 간격을 두고 시작
         );
 
-        // topSlide ScrollTrigger 생성
+        // topSlide ScrollTrigger
         ScrollTrigger.create({
             trigger: "#topSlide",
-            start: "top 10%",
+            start: "-30% 50%",
             end: "bottom center",
             toggleActions: "play none none reverse",
             animation: tween1,
             // markers: true
         });
 
-        // bottomSlide ScrollTrigger 생성
+        // bottomSlide ScrollTrigger
         ScrollTrigger.create({
             trigger: "#bottomSlide",
-            start: "top center",
+            start: "top 70%",
             end: "center center",
             toggleActions: "play none none reverse",
             animation: tween2,
@@ -244,14 +313,15 @@ $(document).ready(function () {
         });
     }
 
-    // 초기 설정
-    createScrollTriggers();
+    // 초기 실행
+    createResponsiveTriggers();
 
-    // 윈도우 리사이즈 시 반응형 적용
-    $(window).resize(function () {
-        createScrollTriggers();
+    // 화면 크기 변경 시 반응형 처리
+    $(window).on('resize', function () {
+        createResponsiveTriggers();
     });
 });
+
 
 
 // contact us 유효성 안내문

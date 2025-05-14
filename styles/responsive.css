@@ -1,44 +1,467 @@
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 2300px) {
+    header .pc {display: flex;}
+    header .mo {display: none;}
+    
+    /* intro 페이지 */
     .intro .textContents .sub br:nth-child(2){display: none;}
     .intro .textContents .desc br:nth-child(2){display: none;}
+
+    /* clientsTestimonials 페이지 */
     .reviewBoxMo {display: none;}
 
-}
+    .swiper-button-next:after, .swiper-button-prev:after {display: none;}
+
+    /* contactUs 페이지 */
+    .form .userInfo .agBox label span br{display: none;}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .row .result br {display: none;}}
 
 @media screen and (max-width: 1200px) {
     .wrap {font-size: 0.9vw;}
     header .pc {padding: 2.5rem 6.5rem 2.5rem 6rem;}
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 720px) {
+    header .pc {display: none;}
+    header .mo {display: block;}
     .wrap {font-size: 1.2vw;}
-    #topSlide {padding: 2rem 2.6rem;}
-    #bottomSlide {padding: 2rem 2.6rem;}
-    .caseStudiesSlide .swiper-wrapper .swiper-slide {
-        flex-flow: column;
+    .legend .num {font-size: 3rem;}
+    .swiper-button-next:after, .swiper-button-prev:after {display: block;} 
+
+    /* 모바일 header */
+    .mo {
+        background: rgba(2, 2, 2, 0.5);
+        border-radius: 0rem 0rem 4rem 8rem;
+        /* height: 9.875rem; */
+        padding: 6.625rem 0;
+        position: relative;
     }
+    .mo .menu {
+        position: relative;
+    }
+    .mo .menu .menuIcon {
+        padding-left: 7.625rem;
+    }
+    .mo .menu .menuIcon img {
+    }
+    .mo .menu .logo {
+        display: block;
+        width: 17.5rem;
+        height: 4.875rem; 
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .mo .menu .logo img {width: 100%;}
+
+    .mo .gnbBox {
+        padding: 22.4rem 7.4rem 6.6rem;
+        background: rgba(34, 34, 34, 0.50);
+        backdrop-filter: blur(20px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-bottom-right-radius: 4rem;
+        z-index: -1;
+        display: none;
+    }
+    .mo .gnbBox::after {
+    }
+
+    .mo .gnb {}
+    .mo .gnb li {
+        display: flex;
+        align-items: center;
+        gap: 3.6rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+        padding-bottom: 5rem;
+    }
+    .mo .gnb li:not(:nth-child(4)) {
+        margin-bottom: 4.4rem;
+    }
+
+    .mo .gnb li .gnbNum {
+        color: #61FF83;
+        font-family: "GmarketSansBold";
+        font-size: 2.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .mo .gnb li a {
+        font-family: "GmarketSansMedium";
+        font-size: 3.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .mo .gnbBox .desc p {
+        color: #61FF83;
+        font-size: 3.2rem;
+        border: none;
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        padding-top: 17.6rem;
+    }
+    .mo .gnbBox .desc div {
+        width: 11.2rem; 
+        height: 2.8rem; 
+        padding-top: 1.8rem;
+    }
+    .mo .gnbBox .desc div img {
+        width: 100%;
+    }
+
+    /* caseStudies 페이지 */
+    .caseStudies {background: url(../images/bg_mo_02.png) no-repeat top center / cover;}
+    .caseStudies .slideWrap {padding-top: 6.8125rem;}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide { flex-flow: column; }
+    #topSlide {padding: 4rem 6.6rem;}
+    #bottomSlide {padding: 4rem 6.6rem;}
+
+    /* clientsTestimonials 페이지 */
     .reviewBox {display: none;}
-    .reviewBoxMo {display: block;}
+    .reviewBox .item {flex-flow: column;}
+    .reviewBoxMo {display: block; padding: 0 5.6rem;}
+    .reviewBoxMo .swiper-slide .item {padding: 3% 0 0 0;}
+    .reviewBoxMo .swiper-slide .item .profile {gap: 3.6rem; padding-bottom: 2.5rem;}
+    .reviewBoxMo .swiper-slide .item .profile .personImg {width: 10.3rem;}
+    .reviewBoxMo .swiper-slide .item .company .name {font-size: 4.2rem;}
+    .reviewBoxMo .swiper-slide .item .company .desc .date,
+    .reviewBoxMo .swiper-slide .item .company .desc .category {font-size: 2.1rem;}
+
+    .reviewBoxMo .swiper-slide .item .comment .headline {font-size: 3rem;}
+    .reviewBoxMo .swiper-slide .item .comment .content {font-size: 2.4rem;}
+
+    .contactUs .infoBox .promoText .text {font-size: 2.5rem; line-height: 1.5;}
+    .contactUs .infoBox .info .title {font-size: 3.25rem;}
+    .form .userInfo .row .title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        padding: 1.6875rem 0 0.0 2.375rem;
+    }
+    .form .userInfo .row .question select,
+    .form .userInfo .row input[type="text"] {font-size: 2.5rem;}
+
+    .form .userInfo .row input[type="text"] {padding-left: 2.375rem;}
+    .form .userInfo .row .question select {width: calc(100% - 4rem);}
+    .form .userInfo .row .submit {margin-top: 2rem;}
+
+
+    .legend .text { font-size: 4.875rem; }
+    .slogan { margin: 25.875rem 0 24.75rem 0; }
+    .slogan .sloganTitle {font-size: 3.375rem;}
+    .slogan .sloganDesc {font-size: 2.25rem; line-height: 1;}
+    .slogan .logoText {font-size: 4.5rem;}
+    .slideText { font-size: 23.75rem; }
+
+    /* ourServices 슬라이드 */
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) {
+        width: 40.375rem !important;
+        height: 55.0625rem !important;
+    }
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .num {
+        font-size: 3.5rem;
+    }
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .title {
+        font-size: 4.25rem;
+    }
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .sub {
+        font-size: 2.875rem;
+    }
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .desc {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+    .ourServices .swiper-slide .descText .subject {
+        font-size: 1.825rem;
+    }
+    .ourServices .swiper-slide .descText .content {font-size: 1.525rem; line-height: 1.5;}
+    /* .swiper-pagination-clickable .swiper-pagination-bullet {width: 5rem; height: 5rem;} */
+
+    /* 샌드글라스 목업 */
+    .sandGlass .textBox .num {font-size: 3.5rem;}
+    .sandGlass .textBox .title {font-size: 5.25rem;}
+    .sandGlass .textBox .sub {font-size: 3.875rem;}
+    .sandGlass .textBox .desc {font-size: 2.215rem; line-height: 1.2;}
+
+    .sandGlass .sloganTitle {font-size: 3.5rem;}
+    .sandGlass .sloganDesc{font-size: 2.25rem; line-height: 1.2;}
+    .sandGlass .logoText {font-size: 4.5rem;}
+
+    .caseStudies .desc {font-size: 2.875rem;}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .case .field {line-height: 1.2;}
+
+    /* intro 페이지 */
+    .intro .videoBox {
+        padding: 0;
+        border-radius: 0;
+    }
+    .intro #location {
+        width: 250%; 
+        padding: 0;
+        background-position: center;
+        border-radius: 0;
+    }
+    .intro .textContents { left: 5%; }
+    .intro .textContents .title {
+        font-size: 11rem;
+        line-height: 1.2;
+        width: 100%;
+        margin-bottom: 17rem;
+    }
+    .intro .textContents .title::after {
+        left: -20rem;
+        top: 16.5rem;
+        width: 100%;
+    }
+    .intro .textContents .sub {
+        width: 140%; 
+        font-size: 4.8rem;
+        line-height: 1.2;
+        margin-bottom: 4.5625rem;
+    }
+    .intro .textContents .sub br:nth-child(2) { display: block; }
+    .intro .textContents .desc {
+        font-size: 3.2rem;
+        line-height: 1.4;
+        letter-spacing: 0;
+    }
+    .intro .textContents .desc br:nth-child(2) { display: block; }
+
+    /* ourServices 페이지 */
+    .ourServices {
+        background: url(../images/bg_mo_03.png) no-repeat top 38% center / 100%;
+        padding-bottom: 20rem;
+    }
+    /* 슬라이드 */
+    .ourServices .servicesSlide { padding-top: 4.5rem; padding-right: 8rem; }
+    .ourServices .servicesSlide .swiper-pagination { padding: 2.75rem 8.75rem; width: auto;}
+    .ourServices .servicesSlide .servicesSlide_swiper { padding-bottom: 11.125rem; }
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) { padding-left: 7rem; }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText {
+        font-size: 3.2vw;
+        word-break: keep-all;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        padding-top: 7.6rem;
+        font-size: 2.8rem;
+    }
+    /* 샌드글라스 목업 */
+    .sandGlass { padding-top: 22rem; }
+    .sandGlass .title { font-size: 7.75rem; }
+    .sandGlass .desc { font-size: 3.125rem; }
+    .sandGlass .textBox .desc { padding-bottom: 9.375rem; }
+    .sandGlass .mockupImg { height: auto; }
+
+    /* caseStudies 페이지 */
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .case {
+        width: auto;
+        padding: 6.4rem 19.2rem 6.6rem 6.2rem;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .case .caseNum {
+        font-size: 3.6rem;
+        padding-bottom: 2.36rem;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .case .company {
+        font-size: 6.4rem;
+        padding-bottom: 1.4rem;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .case .field {
+        font-size: 3.6rem;
+        font-weight: 100;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents {
+        width: auto;
+        padding: 7.8rem 5.2rem 8.4rem 5.4rem;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText { gap: 1rem; }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .row {gap: 10.5625rem;}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .row .title {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .row .result {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solutionResult br { display: none; }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText br { display: none; }
+    .brandBox .name { padding: 0 20%; }
+    .brandBox .name p { font-size: 2.8rem; word-break: keep-all; }
+
+    .clientsTestimonials > .desc {font-size: 2.875rem;}
+
+    .caseStudies .sloganTitle {    font-size: 3.5rem;}
+    .caseStudies .sloganDesc {
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+    .caseStudies .logoText {font-size: 4.5rem;}
+
+    /* contactUs 페이지 */
+    .contactUs { padding: 6rem 0 0 0; }
+    .contactUs .infoBox {
+        flex-flow: column;
+        padding: 6rem;
+    }
+    .contactUs .infoBox .promoText .title { font-size: 4.5rem; }
+    .contactUs .infoBox .promoText .text { word-break: keep-all; }
+    .contactUs .infoBox .promoText .text br { display: none; }
+    .contactUs .infoBox .info .row .item .content { font-size: 2.8rem; }
+    .contactUs .infoBox .info .item .content { font-size: 2.8rem; }
+
+
+    .brandBox .title {font-size: 5rem;}
+
+    .brandBox {padding-top: 5rem;}
+
+    .form .userInfo .row { flex-flow: column; height: auto; }
+    .form .userInfo .row .userName, .form .userInfo .row .question {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    .form .userInfo .row .userPhone {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    .form .userInfo .row #selectAlert, 
+    .form .userInfo .row #nameAlert, 
+    .form .userInfo .row #phoneAlert {top: 50%; left: 2%;}
+
+    .form .userInfo { padding: 0 4.6rem; }
+    .form .userInfo .agBox { padding-bottom: 3rem; justify-content: space-between; }
+    .form .userInfo .agBox label { gap: 1.4rem; }
+    .form .userInfo .agBox label span { font-size: 2.3rem; line-height: 1.5; }
+    .form .userInfo .agBox label span br { display: block; }
+    .form .userInfo .agBox label input {width: 2.5375rem; height: 2.5375rem;}
+    .form .userInfo .agBox .btn-agreement {font-size: 2.3rem; }
+
+    .form .agreement h3 { font-size: 150%; }
+    .form .agreement .button { font-size: 140%; }
+    .form .agreement ol li { font-size: 140%; font-weight: 100; }
+
+    /* footer 영역 */
+    footer { padding: 4.6rem 5.4rem; flex-flow: column; align-items: center; }
+    footer .logo { height: auto; margin-bottom: 4rem; width: 15.375rem; }
+    footer .contents {
+        display: flex;
+        flex-flow: column-reverse;
+        gap: 2rem;
+    }
+    footer .gnb { gap: 4rem; justify-content: space-between; }
+    footer .gnb li { font-size: 2.4rem; }
+    footer .contents .desc {
+        text-align: center;
+        padding-bottom: 0;
+    }
+    footer .contents .desc li { font-size: 2.6rem; line-height: 1.3;}
+
 }
 
 @media screen and (max-width: 430px) {
+    /* 공통 */
     html { font-size: 62.5%; } 
     html, body { width: 100%; }
     .wrap {font-size: 2vw;}
     .legend .text { font-size: 2.4375rem;}
+    .legend .num {font-size: 2rem;}
     .slogan { margin: 12.9375rem 0 12.375rem 0;}
-    .ourServices .servicesSlide .servicesSlide_swiper { padding-bottom: 9.0625rem; }
-    .caseStudiesSlide .swiper-wrapper br {}
-    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText {
-        font-size: 1.6vw; 
-        word-break: keep-all; 
-        line-height: 1.5;
-        letter-spacing: 1px;
-        padding-top: 3.8rem;
-        font-size: 1.4rem;
+    .slideText {font-size: 8.875rem;}
+    .slogan .sloganTitle {font-size: 1.375rem;}
+    .slogan .sloganDesc {font-size: 1.25rem; line-height: 1.2;}
+    .slogan .logoText {font-size: 2.5rem;}
+
+    /* mo 버전 */
+    .mo {
+        background: rgba(2, 2, 2, 0.5);
+        border-radius: 0rem 0rem 2rem 4rem;
+        /* height: 4.9375rem; */
+        padding: 3.3125rem 0;
+        position: relative;
     }
-    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText br {display: none;}
-    
+    .mo .menu {
+        position: relative;
+    }
+    .mo .menu .menuIcon {
+        padding-left: 3.8125rem;
+    }
+    .mo .menu .menuIcon img{
+    }
+    .mo .menu .logo {
+        display: block;
+        width: 8.75rem;
+        height: 2.4375rem; 
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .mo .menu .logo img {width: 100%;}
+
+    .mo .gnbBox {
+        padding: 11.2rem 3.7rem 3.3rem;
+        background: rgba(34, 34, 34, 0.50);
+        backdrop-filter: blur(20px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-bottom-right-radius: 2rem;
+        z-index: -1;
+        display: none;
+    }
+    .mo .gnbBox::after {
+
+    }
+    .mo .gnb {}
+    .mo .gnb li {
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+        padding-bottom: 2.5rem;
+    }
+    .mo .gnb li:not(:nth-child(4)){margin-bottom: 2.2rem;}
+
+    .mo .gnb li .gnbNum {
+        color: #61FF83;
+        font-family: "GmarketSansBold";
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .mo .gnb li a {
+
+        font-family: "GmarketSansMedium";
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .mo .gnbBox .desc p {
+        color: #61FF83;
+        font-size: 1.6rem;
+        border: none;
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        padding-top: 8.8rem;
+    }
+    .mo .gnbBox .desc div {width: 5.6rem; height: 1.4rem; padding-top: 0.9rem;}
+    .mo .gnbBox .desc div img {width: 100%;}
+
+    /* intro 페이지 */
     .intro .videoBox {
         padding: 0;
         border-radius: 0;
@@ -51,7 +474,8 @@
     .intro .textContents {left: 8%;}
     .intro .textContents .title {
         width: 59%;
-        margin-bottom: 8.5rem;
+        margin-bottom: 6.5rem;
+        font-size: 3rem;
     }
     .intro .textContents .title::after {
         left: -10rem;
@@ -62,10 +486,10 @@
         width: 70%; 
         font-size: 2.4rem;
         line-height: 1.3;
+        margin-bottom: 1.5625rem;
     }
     .intro .textContents .sub br:nth-child(1) {display: none;}
     .intro .textContents .sub br:nth-child(2) {display: block;}
-
     .intro .textContents .desc {
         font-size: 1.6rem;
         line-height: 1.2;
@@ -73,21 +497,67 @@
     }
     .intro .textContents .desc br:nth-child(2){display: block;}
 
-    .slideText {font-size: 11.875rem;}
-    .sandGlass .textBox .desc {padding-bottom: 4.6875rem;}
+    /* ourServices 페이지 */
     .ourServices {
-        padding-top: 6.8125rem; 
-        background: url(../images/bg_05.png) no-repeat top center / cover;
+        padding-top: 12.625rem; 
+        background: url(../images/bg_mo_03.png) no-repeat top 19% center / 100%;
         padding-bottom: 10rem;
     }
     
-    .ourServices .servicesSlide {padding-top: 2.25rem;}
+    /* 슬라이드 */
+    .ourServices .servicesSlide {padding-top: 2.25rem; padding-right: 4rem;}
+    .ourServices .swiper-slide .descText .subject {font-size: 1.125rem; font-weight: 200;}
+    .ourServices .swiper-slide .descText .content {font-size: 1.125rem; line-height: 1.5625rem;}
     .ourServices .servicesSlide .swiper-pagination {padding: 1.375rem 4.375rem;}
-    .sandGlass {padding-top: 5rem;}
+    .ourServices .servicesSlide .servicesSlide_swiper { padding-bottom: 9.0625rem; }
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) { padding-left: 3.5rem;}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText {
+        font-size: 1.6vw; 
+        word-break: keep-all; 
+        line-height: 1.5;
+        letter-spacing: 1px;
+        padding-top: 3.8rem;
+        font-size: 1.4rem;
+    }
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) {
+        width: 30.375rem !important;
+        height: 39.0625rem !important;
+    }
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .num {
+        font-size: 1.5rem;
+    }
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .title {
+        font-size: 2.25rem;
+    }
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .sub {
+        font-size: 1.875rem;
+    }
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) .swiper-wrapper:not(.wrapper2) .swiper-slide:not(.inner-slide) .desc {
+        font-size: 1.125rem;
+        line-height: 1.5625rem;
+    }
+    /* 샌드글라스 목업 */
+    .sandGlass {padding-top: 19rem;}
     .sandGlass .title {font-size: 3.875rem;}
     .sandGlass .desc { font-size: 1.5625rem;}
+    .sandGlass .textBox .desc {padding-bottom: 4.6875rem;}
     .sandGlass .mockupImg {height: auto;}
+    .sandGlass .textBox .num {font-size: 1.5rem;}
+    .sandGlass .textBox .title {font-size: 2.25rem;}
+    .sandGlass .textBox .sub {font-size: 1.875rem;}
+    .sandGlass .textBox .desc {font-size: 1.125rem; line-height: 1.5625rem;}
 
+    .sandGlass .sloganTitle {font-size: 1.5rem;}
+    .sandGlass .sloganDesc {font-size: 1.25rem; line-height: 1.9375rem;}
+    .sandGlass .logoText {font-size: 2.25rem;}
+
+    .caseStudies .desc {font-size: 1.875rem;}
+    
+    .clientsTestimonials > .desc {font-size: 1.875rem;}
+
+    /* caseStudies 페이지 */
+    #topSlide,
+    #bottomSlide {padding: 2rem 2.6rem;}
     .caseStudiesSlide .swiper-wrapper .swiper-slide .case {
         width: auto;
         padding: 3.2rem 9.6rem 3.3rem 3.1rem;
@@ -103,38 +573,169 @@
     .caseStudiesSlide .swiper-wrapper .swiper-slide .case .field {
         font-size: 1.8rem;
         font-weight: 100;
+        line-height: 1;
     }
     .caseStudiesSlide .swiper-wrapper .swiper-slide .contents {
         width: auto;
         padding: 3.9rem 2.6rem 4.2rem 2.7rem;
     }
-    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solution {
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText {gap: 0.335rem;}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .row {gap: 1.5625rem;}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .row .title {
         font-size: 1.2rem;
         
     }
-    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solutionResult {
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .row .result {
         font-size: 1.2rem;
+        line-height: 1.5625rem;
     }
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .row .result br {display: block;}
     .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText .solutionResult br {display: none;}
-    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .topText {gap: 1.335rem;}
+    .caseStudiesSlide .swiper-wrapper .swiper-slide .contents .bottomText br {display: none;}
+
+    .caseStudies .sloganTitle { font-size: 1.5rem;}
+    .caseStudies .sloganDesc {
+        font-size: 1.25rem;
+        line-height: 1.9375rem;
+    }
+    .caseStudies .logoText {font-size: 2.25rem;}
 
     .brandBox .name  {padding: 0 10%;}
-    .brandBox .name p {
-        font-size: 1.4rem;
-        word-break: keep-all;
+    .brandBox .name p { font-size: 1.4rem; word-break: keep-all; }
+    .brandBox .title {font-size: 2rem;}
+
+    .reviewBoxMo {padding: 0 2.6rem;}
+    .reviewBoxMo .swiper-slide .item {padding: 3rem 0;}
+    .reviewBoxMo .swiper-slide .item .profile {
+        gap: 1.6rem;
+        padding-bottom: 7.5rem;
     }
-    .caseStudies .slideWrap {padding-top: 6.8125rem;}
-    .caseStudies .sldieContent {}
+    .reviewBoxMo .swiper-slide .item .profile .personImg {width: 6.3rem;}
+    .reviewBoxMo .swiper-slide .item .company .name {font-size: 2.2rem;}
+    .reviewBoxMo .swiper-slide .item .company .desc .date,
+    .reviewBoxMo .swiper-slide .item .company .desc .category {font-size: 1.1rem;}
+    .reviewBoxMo .swiper-slide .item .comment .headline {font-size: 2rem;}
+    .reviewBoxMo .swiper-slide .item .comment .content {font-size: 1.4rem;}
+    
+    
 
-    .reviewBox .item {flex-flow: column;}
-
+    /* contactUs 페이지 */
     .contactUs {padding: 3rem 0 0 0;}
     .contactUs .infoBox {
         flex-flow: column;
         padding: 3rem ;
     }
-    .contactUs .infoBox .promoText .text {word-break: keep-all;}
+    .contactUs .infoBox .promoText .title {font-size: 2.25rem;}
+    .contactUs .infoBox .promoText .text {word-break: keep-all; font-size: 1.5rem;}
     .contactUs .infoBox .promoText .text br{display: none;}
+    .contactUs .infoBox .info .row .item .content {font-size: 1.4rem;}
+    .contactUs .infoBox .info .item .content {font-size: 1.4rem;}
+    .contactUs .infoBox .info .title {font-size: 1.25rem;}
+    .form .userInfo .row .title {
+        padding: 0.6875rem 0 0.0 1.375rem;
+        font-size: 1.5rem;
+        line-height: 2.375rem;
+    }
+    .form .userInfo .row .question select {width: calc(100% - 2rem);}
+    .form .userInfo .row .question select, .form .userInfo .row input[type="text"] {
+        font-size: 1.5rem;
+    }
+    .form .userInfo .row input[type="text"] {padding-left: 1.375rem;}
+    
+    .form .userInfo .row {flex-flow: column; height: auto;}
+    .form .userInfo .row .userName, .form .userInfo .row .question {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .form .userInfo .row .userPhone {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .form .userInfo {padding: 0 2.3rem;}
+    .form .userInfo .agBox {padding-bottom: 1.5rem; justify-content: space-between;}
+    .form .userInfo .agBox label {gap: 0.7rem;}
+    .form .userInfo .agBox label span {font-size: 0.9rem; line-height: 1.4;}
+    .form .userInfo .agBox label span br {display: block;}
+    .form .userInfo .agBox label input {
+        width: 0.9375rem;
+        height: 0.9375rem;
+    }
+    .form .userInfo .agBox .btn-agreement {width: 19%; font-size: 0.9rem;}
 
-    footer {padding: 0;}
+    .form .agreement h3 {font-size: 150%;}
+    .form .agreement .button {font-size: 120%;}
+    .form .agreement ol li {font-size: 120%; font-weight: 100;}
+
+    .form .userInfo .row .submit {width: 55%;}
+
+    .form .userInfo .row #selectAlert, 
+    .form .userInfo .row #nameAlert, 
+    .form .userInfo .row #phoneAlert {top: 50%; left: 4%; font-size: 2rem;}
+
+    /* footer 영역 */
+    footer {padding: 2.3rem 2.7rem; flex-flow: column; align-items: center;}
+    footer .logo {width: 7.375rem; height: auto; margin-bottom: 2rem;}
+    footer .contents {
+        display: flex;
+        flex-flow: column-reverse;
+        gap: 1rem;
+    }
+    footer .gnb {gap: 2rem; justify-content: space-between;}
+    footer .gnb li {font-size: 0.7rem;}
+    footer .contents .desc {
+        text-align: center;
+        padding-bottom: 0;
+    }
+    footer .contents .desc li {font-size: 0.8rem;}
+    
+    .swiper-pagination-bullet:nth-child(6) {display: none;}
+}
+
+@media screen and (max-width: 390px) {
+    .legend .num {font-size: 1.4rem;}
+    .legend .text {font-size: 2rem;}
+
+    .intro .textContents .title {margin-bottom: 6.5rem;}
+    .ourServices .swiper.servicesSlide:not(.mySwiper2) {padding-left: 2.5rem;}
+    #topSlide {padding: 2rem 2.8rem; padding-bottom: 0;}
+    .clientsTestimonials .legend {padding: 0 1rem;}
+
+    .clientsTestimonials > .desc {padding-bottom: 3.6875rem;}
+    .contactUs .desc {font-size: 1.575rem;}
+    .contactUs .infoBox {gap: 5.0625rem;}
+    .contactUs .infoBox .info .row .item .content,
+    .contactUs .infoBox .info .item .content {font-size: 1.2rem;}
+}
+
+@media screen and (max-width: 375px) {
+    .slogan {margin: 6.9375rem 0 8.375rem 0;}
+    .slideText { font-size: 7.875rem; }
+    .slogan .sloganTitle {font-size: 1.2rem;}
+    .intro .textContents .title {
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 5.5rem;
+    }
+    .intro .textContents .sub { font-size: 1.9rem; }
+    .intro .textContents .desc {font-size: 1.4rem;}
+    .intro .textContents .title::after {
+        width: 120%;
+        height: 120%;
+        left: -6rem;
+        top: 4.25rem;
+    }
+    .ourServices {padding-top: 6.625rem;}
+    .sandGlass {padding-top: 14rem;}
+    .sandGlass .desc { font-size: 1.2625rem; }
+
+    .sandGlass .textBox .sub {font-size: 1.375rem;}
+    .caseStudies .desc,
+    .clientsTestimonials > .desc {font-size: 1.575rem;}
+    .caseStudies .sloganTitle {font-size: 1.3rem;}
+
+    .reviewBoxMo .swiper-slide .item {width: 85%;}
+    .reviewBoxMo .swiper-slide .item .profile {padding-bottom: 4.5rem;}
+    .reviewBoxMo .swiper-wrapper .swiper-slide {height: 40.1rem !important;}
+
+    footer .gnb {gap: 1.5rem;}
 }
